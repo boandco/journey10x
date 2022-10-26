@@ -55,25 +55,3 @@ fields:
   config:
     required: false
   label: Copyright
-- name: sub_menu
-  type: field_group_list
-  fields:
-  - name: link_title
-    type: text
-    config:
-      required: false
-    label: Link title
-  - name: link_url
-    type: text
-    config:
-      required: false
-    label: Link url
-  - name: target_blank
-    type: boolean
-    label: Opens in a new tab
-    default: true
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: Sub menu
