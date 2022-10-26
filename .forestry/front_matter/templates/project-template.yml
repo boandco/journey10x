@@ -24,3 +24,4 @@ fields:
   description: Feature the project in the 'Work' section of the homepage
 pages:
 - _projects/nike.md
+- _projects/supreme.md
