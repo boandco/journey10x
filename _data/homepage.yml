@@ -17,8 +17,13 @@ page_sections:
 - template: block-divider
   animated_gradient: true
 - template: block-clients
-  section_title: ''
-  client_logos: []
+  section_title: trusted by
+  client_logos:
+  - "/assets/images/2022-10-26-group-49.png"
+  - "/assets/images/2022-10-26-group-48.png"
+  - "/assets/images/2022-10-26-group-47.png"
+  - "/assets/images/2022-10-26-group-46.png"
+  - "/assets/images/2022-10-26-group-45.png"
 - template: block-work
   section_title: ''
   heading: ''
