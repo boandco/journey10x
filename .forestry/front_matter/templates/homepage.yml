@@ -16,3 +16,5 @@ fields:
     required: false
   label: Headline
   description: The main text on your hero
+pages:
+- _data/homepage.yml
