@@ -80,10 +80,3 @@ page_sections:
   section_title: ''
   heading: ''
   subheading: ''
-- template: block-footer
-  contact:
-    phone_number: ''
-    email: ''
-    social_media: []
-  copyright: ''
-  sub_menu: []
