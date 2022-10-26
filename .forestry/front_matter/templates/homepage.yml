@@ -1,4 +1,18 @@
 ---
 label: Homepage
 hide_body: true
-fields: []
+fields:
+- name: hero
+  type: blocks
+  label: Hero
+  template_types:
+  - seo-content
+  config:
+    min: 
+    max: 
+- name: headline
+  type: text
+  config:
+    required: false
+  label: Headline
+  description: The main text on your hero
