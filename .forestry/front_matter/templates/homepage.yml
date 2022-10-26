@@ -60,5 +60,15 @@ fields:
     labelField: 
   label: Divider section
   description: A gradient block to divide content
+- name: clients
+  type: field_group
+  config: {}
+  fields:
+  - name: client_logos
+    type: image_gallery
+    config: {}
+    label: Client logos
+    description: Use PNG's with the color matching the design.
+  label: Clients
 pages:
 - _data/homepage.yml
