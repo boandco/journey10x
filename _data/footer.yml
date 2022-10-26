@@ -1,6 +1,12 @@
 ---
 contact:
-  phone_number: ''
-  email: ''
-  social_media: []
+  phone_number: 888-373-8888
+  email: info@journey10x.com
+  social_media:
+  - url: https://instagram.com
+    social_network: Instagram
+  - url: https://facebook.com
+    social_network: Facebook
+  - url: https://youtube.com
+    social_network: YouTube
 copyright: ''
