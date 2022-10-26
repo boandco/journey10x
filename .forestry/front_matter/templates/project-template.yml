@@ -23,5 +23,6 @@ fields:
   label: Display on homepage
   description: Feature the project in the 'Work' section of the homepage
 pages:
+- _projects/google.md
 - _projects/nike.md
 - _projects/supreme.md
