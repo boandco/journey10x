@@ -10,6 +10,10 @@ sections:
 - type: document
   path: _data/homepage.yml
   label: Homepage content
+- type: document
+  path: _data/footer.yml
+  label: Footer
+  match: "**/*"
 upload_dir: assets/images
 public_path: "/assets/images"
 front_matter_path: ''
