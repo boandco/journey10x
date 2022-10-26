@@ -56,6 +56,6 @@ fields:
   config:
     required: false
   label: Copyright
-  description: The copyright information after the '©' symbol.
+  description: The copyright information
 pages:
 - _data/footer.yml
