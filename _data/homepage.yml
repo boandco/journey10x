@@ -44,10 +44,12 @@ page_sections:
     display_on_homepage: false
     image: "/assets/images/social-share.jpg"
   - template: project-template
-    date: ''
-    title: ''
-    description: ''
-    display_on_homepage: false
+    date: '2022-08-11 04:00:00 +0000'
+    title: Nike
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+      non finibus diam. Praesent rhoncus tortor sit amet urna tempus, sit amet pellentesque
+      turpis condimentum. '
+    display_on_homepage: true
     image: "/assets/images/social-share.jpg"
   - template: project-template
     date: '2022-10-20 04:00:00 +0000'
