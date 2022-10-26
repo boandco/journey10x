@@ -11,7 +11,8 @@ fields:
 - name: project_list
   type: blocks
   label: Project list
-  template_types: []
+  template_types:
+  - project-template
   config:
     min: 
     max: 
