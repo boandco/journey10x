@@ -46,20 +46,6 @@ fields:
         format: markdown
     label: Description
   label: About us
-- name: divider_section
-  type: field_group_list
-  fields:
-  - name: animated_gradient
-    type: boolean
-    label: Animated gradient
-    description: Whether the gradient moves
-    default: true
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: Divider section
-  description: A gradient block to divide content
 - name: clients
   type: field_group
   config: {}
