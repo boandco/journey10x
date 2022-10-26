@@ -7,10 +7,6 @@ sections:
 - type: document
   path: _data/seo.yml
   label: SEO Content
-- type: document
-  path: _data/hompage.yml
-  label: Homepage
-  match: "**/*"
 upload_dir: assets/images
 public_path: "/assets/images"
 front_matter_path: ''
