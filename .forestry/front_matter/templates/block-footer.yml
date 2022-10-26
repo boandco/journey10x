@@ -49,7 +49,7 @@ fields:
       max: 
       labelField: 
     label: Social media
-  label: Contact
+  label: Contact information
 - name: copyright
   type: text
   config:
