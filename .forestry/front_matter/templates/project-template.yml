@@ -22,3 +22,5 @@ fields:
   type: boolean
   label: Display on homepage
   description: Feature the project in the 'Work' section of the homepage
+pages:
+- _projects/nike.md
