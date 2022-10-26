@@ -37,6 +37,7 @@ fields:
   type: boolean
   label: Display on homepage
   description: Feature the project in the 'Work' section of the homepage
+  default: true
 pages:
 - _projects/google.md
 - _projects/nike.md
