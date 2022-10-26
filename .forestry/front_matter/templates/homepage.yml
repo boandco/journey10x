@@ -2,7 +2,7 @@
 label: Homepage
 hide_body: true
 fields:
-- name: homepage
+- name: page_sections
   type: blocks
   template_types:
   - block-hero
@@ -17,6 +17,6 @@ fields:
   config:
     min: 
     max: 
-  label: Homepage content
+  label: Page sections
 pages:
 - _data/homepage.yml
