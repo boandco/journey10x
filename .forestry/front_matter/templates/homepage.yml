@@ -11,6 +11,7 @@ fields:
   - block-clients
   - block-work
   - block-team
+  - block-locations
   - block-contact
   - block-footer
   config:
