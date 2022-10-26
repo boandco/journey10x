@@ -42,16 +42,19 @@ page_sections:
     title: ''
     description: ''
     display_on_homepage: false
+    image: "/assets/images/social-share.jpg"
   - template: project-template
     date: ''
     title: ''
     description: ''
     display_on_homepage: false
+    image: ''
   - template: project-template
     date: ''
     title: ''
     description: ''
     display_on_homepage: false
+    image: ''
 - template: block-team
   section_title: Team
   heading: our team of collectives...
