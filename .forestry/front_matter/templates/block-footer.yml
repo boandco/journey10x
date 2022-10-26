@@ -1,5 +1,5 @@
 ---
-label: Footer block
+label: Footer
 hide_body: true
 fields:
 - name: contact
