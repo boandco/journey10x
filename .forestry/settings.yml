@@ -10,6 +10,14 @@ sections:
 - type: document
   path: _data/homepage.yml
   label: Homepage content
+- type: directory
+  path: _projects
+  label: Projects
+  create: documents
+  match: "**/*"
+  new_doc_ext: ".md"
+  templates:
+  - project-template
 - type: document
   path: _data/footer.yml
   label: Footer
