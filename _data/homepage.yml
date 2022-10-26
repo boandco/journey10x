@@ -37,10 +37,20 @@ page_sections:
   - Production
   - Development
 - template: block-team
-  section_title: ''
-  heading: ''
-  subheading: ''
-  team_members: []
+  section_title: Team
+  heading: our team of collectives...
+  subheading: are passionate people dedicated to making empowerment content.
+  team_members:
+  - name: Tommy Ronson
+    job_title: Creative Director
+  - name: Andrew Wickerson
+    job_title: Creative Direction
+  - name: Tommy Ronson
+    job_title: Creative Director
+  - name: Tommy Ronson
+    job_title: Creative Director
+  - name: Tommy Ronson
+    job_title: Creative Director
 - template: block-divider
   animated_gradient: true
 - template: block-locations
