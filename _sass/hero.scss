@@ -1,0 +1,106 @@
+.hero {
+  height: 75vh;
+  width: 90vw;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    position: relative;
+    z-index: 6;
+    text-align: center;
+    font-family: sans-serif;
+    text-transform: lowercase;
+    letter-spacing: -0.04em;
+    font-size: clamp(24px, 10vw, 180px);
+  }
+  
+  .gradient {
+    background: linear-gradient(107.65deg, #8F80FF 0%, #D89DFF 29.17%, #A3D1FF 80.73%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .blur {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 5;
+      background: rgba(255, 255, 255, 0.01);
+      backdrop-filter: blur(100px);
+    }
+    svg {
+      position: absolute;
+      &#highlight {
+        top: -10%;
+        right: 10%;
+        z-index: 2;
+        animation: 10s move-highlight linear infinite;
+        @keyframes move-highlight {
+          0%,100% {
+            top: -10%;
+            right: 10%;
+          }
+          50% {
+            top: 0%;
+            right: -20%;
+          }
+        }
+      }
+      &#lowlight {
+        top: -10%;
+        right: 10%;
+        z-index: 1;
+        animation: 10s move-lowlight linear infinite;
+        @keyframes move-lowlight {
+          0%,100% {
+            top: -10%;
+            right: 10%;
+          }
+          50% {
+            top: 5%;
+            right: -10%;
+          }
+        }
+      }
+      &#mainlight {
+        top: -15%;
+        left: 10%;
+        z-index: 3;
+        animation: 10s move-mainlight linear infinite;
+        @keyframes move-mainlight {
+          0%,100% {
+            top: -15%;
+            left: 10%;
+          }
+          50% {
+            top: -50%;
+            left: 30%;
+          }
+        }
+      }
+      &#cornerlight {
+        left: -10%;
+        bottom: -10%;
+        z-index: 4;
+        animation: 10s move-cornerlight linear infinite;
+        @keyframes move-cornerlight {
+          0%,100% {
+            left: -10%;
+            bottom: -10%;
+          }
+          50% {
+            left: -20%;
+            bottom: -20%;
+          }
+        }
+      }
+    }
+  }
+}
