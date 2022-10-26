@@ -2,11 +2,11 @@
   height: 75vh;
   width: 90vw;
   border-radius: 24px;
-  overflow: hidden;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   h1 {
     position: relative;
@@ -25,16 +25,20 @@
     position: absolute;
     top: 0;
     left: 0;
-    .blur {
-      position: absolute;
-      top: 0;
-      left: 0;
+
+    &:after {
+      content: '';
       height: 100%;
       width: 100%;
       z-index: 5;
-      background: rgba(255, 255, 255, 0.01);
+      position: absolute;
+      top: 0;
+      left: 0;
       backdrop-filter: blur(100px);
+      -webkit-backdrop-filter: blur(100px);
+      border-radius: 24px;
     }
+    
     svg {
       position: absolute;
       $gradient-duration: 8s;
