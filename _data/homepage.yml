@@ -69,6 +69,6 @@ page_sections:
   - airport_code: LON
     location_name: London
 - template: block-contact
-  section_title: ''
-  heading: ''
-  subheading: ''
+  section_title: Contact us
+  heading: connect with us today...
+  subheading: Lorem ipsum dolor sit amet, send us an  email adipiscing elit.
