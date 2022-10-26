@@ -1,4 +1,24 @@
 ---
 label: Project template
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: Project title
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+  description: Brief description of the project
+- name: display_on_homepage
+  type: boolean
+  label: Display on homepage
+  description: Feature the project in the 'Work' section of the homepage
