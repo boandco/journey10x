@@ -25,11 +25,17 @@ page_sections:
   - "/assets/images/2022-10-26-group-46.png"
   - "/assets/images/2022-10-26-group-45.png"
 - template: block-work
-  section_title: ''
-  heading: ''
-  description: ''
-  section_image: ''
-  services: []
+  section_title: Work
+  heading: "(why) industry leading title here"
+  description: 'your services and what you can offer other companies copy here. Lorem
+    ipsum dolor sit amet, consectetur adipiscing elit. Nam convallis neque in odio
+    venenatis aliquam. '
+  section_image: "/assets/images/2022-10-26-services-image.jpg"
+  services:
+  - Consulting
+  - Design
+  - Production
+  - Development
 - template: block-team
   section_title: ''
   heading: ''
