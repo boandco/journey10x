@@ -48,7 +48,7 @@ page_sections:
     title: ''
     description: ''
     display_on_homepage: false
-    image: ''
+    image: "/assets/images/social-share.jpg"
   - template: project-template
     date: ''
     title: ''
