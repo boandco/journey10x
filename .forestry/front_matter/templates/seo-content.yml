@@ -25,3 +25,5 @@ fields:
   label: Social share image
   description: The preview image that appears when you share your website on social
     media
+pages:
+- _data/seo.yml
