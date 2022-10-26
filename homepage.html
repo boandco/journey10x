@@ -1,0 +1,12 @@
+---
+title: Homepage
+layout: default
+---
+
+<ul>
+  {% for block in site.data.homepage.page_sections %}
+    <li>
+      {{ block.template }}
+    </li>
+  {% endfor %}
+</ul>
