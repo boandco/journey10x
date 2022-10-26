@@ -2,11 +2,49 @@
 label: Homepage
 hide_body: true
 fields:
-- name: headline
-  type: text
-  config:
-    required: false
-  label: Headline
-  description: The main text on your hero
+- name: hero
+  type: field_group
+  config: {}
+  fields:
+  - name: headline
+    type: text
+    config:
+      required: false
+    label: Headline
+  label: Hero
+- name: about_us
+  type: field_group
+  config: {}
+  fields:
+  - name: section_title
+    type: text
+    config:
+      required: false
+    label: Section title
+    description: The title of the section
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  - name: subheading
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Subheading
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Description
+  label: About us
 pages:
 - _data/homepage.yml
