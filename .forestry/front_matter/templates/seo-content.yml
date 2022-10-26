@@ -1,4 +1,27 @@
 ---
 label: SEO Content
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: The text that appears on the website tab
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+  description: Recommended to keep it below 160 characters.
+- name: social_share_image
+  type: file
+  config:
+    maxSize: 64
+  label: Social share image
+  description: The preview image that appears when you share your website on social
+    media
