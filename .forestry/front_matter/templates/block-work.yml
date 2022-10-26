@@ -16,6 +16,7 @@ fields:
   config:
     min: 
     max: 
+  description: The featured projects displayed on the homepage
 - name: heading
   type: text
   config:
