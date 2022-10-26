@@ -54,9 +54,20 @@ page_sections:
 - template: block-divider
   animated_gradient: true
 - template: block-locations
-  section_title: ''
-  heading: ''
-  location_list: []
+  section_title: Our Locations
+  heading: 'we’re an international agency with global reach. Lorem ipsum dolor sit
+    amet, consectetur adipiscing elit. Nam convallis neque in odio venenatis aliquam. '
+  location_list:
+  - airport_code: LAX
+    location_name: California
+  - airport_code: SEA
+    location_name: Seattle
+  - airport_code: JFK
+    location_name: New York
+  - airport_code: YOW
+    location_name: Ottawa
+  - airport_code: LON
+    location_name: London
 - template: block-contact
   section_title: ''
   heading: ''
