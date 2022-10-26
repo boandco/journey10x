@@ -37,19 +37,21 @@
     }
     svg {
       position: absolute;
+      $gradient-duration: 8s;
+      $gradient-easing: ease;
       &#highlight {
         top: -10%;
         right: 10%;
         z-index: 2;
-        animation: 10s move-highlight linear infinite;
+        animation: $gradient-duration move-highlight $gradient-easing infinite;
         @keyframes move-highlight {
           0%,100% {
             top: -10%;
             right: 10%;
           }
           50% {
-            top: 0%;
-            right: -20%;
+            top: 10%;
+            right: -10%;
           }
         }
       }
@@ -57,7 +59,7 @@
         top: -10%;
         right: 10%;
         z-index: 1;
-        animation: 10s move-lowlight linear infinite;
+        animation: $gradient-duration move-lowlight $gradient-easing infinite;
         @keyframes move-lowlight {
           0%,100% {
             top: -10%;
@@ -73,14 +75,14 @@
         top: -15%;
         left: 10%;
         z-index: 3;
-        animation: 10s move-mainlight linear infinite;
+        animation: $gradient-duration move-mainlight $gradient-easing infinite;
         @keyframes move-mainlight {
           0%,100% {
             top: -15%;
             left: 10%;
           }
           50% {
-            top: -50%;
+            top: 15%;
             left: 30%;
           }
         }
@@ -89,7 +91,7 @@
         left: -10%;
         bottom: -10%;
         z-index: 4;
-        animation: 10s move-cornerlight linear infinite;
+        animation: $gradient-duration move-cornerlight $gradient-easing infinite;
         @keyframes move-cornerlight {
           0%,100% {
             left: -10%;
