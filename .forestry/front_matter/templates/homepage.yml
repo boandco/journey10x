@@ -6,6 +6,12 @@ fields:
   type: blocks
   template_types:
   - block-hero
+  - block-about-us
+  - block-clients
+  - block-work
+  - block-team
+  - block-contact
+  - block-footer
   config:
     min: 
     max: 
