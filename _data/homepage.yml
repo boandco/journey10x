@@ -46,3 +46,44 @@ homepage:
     social_media: []
   copyright: ''
   sub_menu: []
+page_sections:
+- template: block-hero
+  headline: ''
+- template: block-about-us
+  section_title: ''
+  heading: ''
+  subheading: ''
+  description: ''
+- template: block-divider
+  animated_gradient: true
+- template: block-clients
+  section_title: ''
+  client_logos: []
+- template: block-work
+  section_title: ''
+  heading: ''
+  description: ''
+  section_image: ''
+  services: []
+- template: block-team
+  section_title: ''
+  heading: ''
+  subheading: ''
+  team_members: []
+- template: block-divider
+  animated_gradient: true
+- template: block-locations
+  section_title: ''
+  heading: ''
+  location_list: []
+- template: block-contact
+  section_title: ''
+  heading: ''
+  subheading: ''
+- template: block-footer
+  contact:
+    phone_number: ''
+    email: ''
+    social_media: []
+  copyright: ''
+  sub_menu: []
