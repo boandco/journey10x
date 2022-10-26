@@ -1,3 +1,7 @@
 ---
-hero: []
+hero:
+- template: seo-content
+  title: ''
+  description: ''
+  social_share_image: ''
 headline: ''
