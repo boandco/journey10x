@@ -1,0 +1,33 @@
+---
+label: Team block
+hide_body: true
+fields:
+- name: section_title
+  type: text
+  config:
+    required: false
+  label: Section title
+  description: The title of the section
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+- name: location_list
+  type: field_group_list
+  fields:
+  - name: airport_code
+    type: text
+    config:
+      required: false
+    label: Airport code
+  - name: location_name
+    type: text
+    config:
+      required: false
+    label: Location name
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Location list

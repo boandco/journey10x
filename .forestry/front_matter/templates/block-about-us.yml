@@ -1,0 +1,33 @@
+---
+label: About us block
+hide_body: true
+fields:
+- name: section_title
+  type: text
+  config:
+    required: false
+  label: Section title
+  description: The title of the section
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+- name: subheading
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Subheading
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description

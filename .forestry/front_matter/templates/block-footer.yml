@@ -1,0 +1,79 @@
+---
+label: Footer block
+hide_body: true
+fields:
+- name: contact
+  type: field_group
+  config: {}
+  fields:
+  - name: phone_number
+    type: text
+    config:
+      required: false
+    label: Phone number
+  - name: email
+    type: text
+    config:
+      required: false
+    label: Email
+  - name: social_media
+    type: field_group_list
+    fields:
+    - name: social_network
+      type: select
+      default: []
+      config:
+        required: false
+        options:
+        - Facebook
+        - Twitter
+        - Instagram
+        - Vimeo
+        - YouTube
+        - Linkedin
+        - Pinterest
+        - TikTok
+        source:
+          type: simple
+          section: 
+          file: 
+          path: 
+      label: Social network
+    - name: url
+      type: text
+      config:
+        required: false
+      label: URL
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Social media
+  label: Contact
+- name: copyright
+  type: text
+  config:
+    required: false
+  label: Copyright
+- name: sub_menu
+  type: field_group_list
+  fields:
+  - name: link_title
+    type: text
+    config:
+      required: false
+    label: Link title
+  - name: link_url
+    type: text
+    config:
+      required: false
+    label: Link url
+  - name: target_blank
+    type: boolean
+    label: Opens in a new tab
+    default: true
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Sub menu
