@@ -116,5 +116,48 @@ fields:
     description: The list of services you offer
   label: Work
   description: Featured project cards will be pulled in from the 'Projects' content
+- name: team
+  type: field_group
+  config: {}
+  fields:
+  - name: section_title
+    type: text
+    config:
+      required: false
+    label: Section title
+    description: The title of the section
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  - name: subheading
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Subheading
+  - name: team_members
+    type: field_group_list
+    fields:
+    - name: name
+      type: text
+      config:
+        required: false
+      label: Name
+    - name: job_title
+      type: text
+      config:
+        required: false
+      label: Job title
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Team members
+  label: Team
 pages:
 - _data/homepage.yml
