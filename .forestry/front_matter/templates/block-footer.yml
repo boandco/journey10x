@@ -49,6 +49,7 @@ fields:
       max: 
       labelField: 
     label: Social media
+    description: Icons that link out to your social media
   label: Contact information
 - name: copyright
   type: text
