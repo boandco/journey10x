@@ -8,6 +8,13 @@ fields:
     required: false
   label: Section title
   description: The title of the section
+- name: project_list
+  type: blocks
+  label: Project list
+  template_types: []
+  config:
+    min: 
+    max: 
 - name: heading
   type: text
   config:
