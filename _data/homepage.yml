@@ -36,6 +36,22 @@ page_sections:
   - Design
   - Production
   - Development
+  project_list:
+  - template: project-template
+    date: '2022-10-05 04:00:00 +0000'
+    title: ''
+    description: ''
+    display_on_homepage: false
+  - template: project-template
+    date: ''
+    title: ''
+    description: ''
+    display_on_homepage: false
+  - template: project-template
+    date: ''
+    title: ''
+    description: ''
+    display_on_homepage: false
 - template: block-team
   section_title: Team
   heading: our team of collectives...
