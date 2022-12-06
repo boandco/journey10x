@@ -1,0 +1,21 @@
+.navigation {
+  width: calc(100% - #{$gutter * 2});
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: $gutter;
+  z-index: 98;
+  display: flex;
+  justify-content: space-between;
+  &__items {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-black;
+      font-weight: 600;
+    }
+  }
+}

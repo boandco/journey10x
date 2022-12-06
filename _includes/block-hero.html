@@ -1,0 +1,18 @@
+<div id="home" class="section hero" data-scroll-section>
+  <div class="content" data-scroll>
+    <h1 id="hero-h1" class="text-animate" data-scroll data-scroll-call="text-animate+hero-h1">{{ site.data.homepage.page_sections[0].headline }}</h1>
+    <a href="#about" class="btn btn__circle btn__dark local">
+      <span class="visually-hidden">Scroll to content</span>
+      <svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.5027 0.46875L10.5027 23.4687" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+        <path d="M19.4386 15.5864L10.5028 24.5286L1.56055 15.5864" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+      </svg>        
+    </a>
+  </div>
+  <img src="/assets/images/JRX-3D-Emblem-Colour.png" data-scroll data-scroll-speed="2">
+  <canvas class="gradient" id="hero-gradient-canvas"></canvas>
+  <script>
+      var hero_gradient = new Gradient()
+      hero_gradient.initGradient('#hero-gradient-canvas');
+  </script>
+</div>

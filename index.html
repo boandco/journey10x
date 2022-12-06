@@ -1,39 +1,33 @@
-<html>
-  <head>
-    <title>Hello world</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-  </head>
-  <body>
-    <div class="hero">
-      <h1>Testing gradient</h1>
-      <div class="gradient">
-        <svg id="highlight" width="552" height="490" viewBox="0 0 552 490" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M27.4792 41.7206C94.778 -44.4956 220.132 25.3464 323.517 60.8484C420.59 94.1828 543.309 119.117 551.005 221.497C560.064 342.021 472.281 454.116 355.386 484.846C252.548 511.88 170.239 423.664 107.009 338.216C39.7283 247.295 -42.1567 130.931 27.4792 41.7206Z" fill="white" fill-opacity="0.7"/>
-        </svg>
-        <svg id="lowlight" width="742" height="764" viewBox="0 0 742 764" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M408.81 32.1607C480.393 40.9177 566.7 20.2374 615.875 73.0174C665.008 125.751 619.953 213.736 641.949 282.389C663.791 350.566 740.495 394.908 741.937 466.488C743.605 549.223 711.966 635.587 650.175 690.588C585.844 747.85 494.7 769.045 408.81 763.008C326.41 757.217 258.924 705.175 190.885 658.308C120.886 610.09 37.2125 568.39 9.55177 487.988C-18.2606 407.144 20.9379 321.982 47.1885 240.618C73.494 159.083 87.1768 60.1863 161.372 17.4163C234.762 -24.8895 324.738 21.8758 408.81 32.1607Z" fill="#6A77ED"/>
-        </svg>
-        <svg id="mainlight" width="826" height="986" viewBox="0 0 826 986" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M319.228 3.30493C436.346 25.3167 439.283 196.407 525.579 278.662C616.793 365.604 807.886 360.278 824.81 485.209C841.498 608.406 678.617 669.122 590.316 756.554C502.887 843.123 442.053 991.969 319.228 985.815C196.812 979.681 131.584 838.979 73.9869 730.683C33.9067 655.323 61.7478 570.131 52.9818 485.209C42.161 380.38 -33.4828 275.389 17.4701 183.165C76.3661 76.5633 199.617 -19.1754 319.228 3.30493Z" fill="#FFC399"/>
-        </svg>
-        <svg id="cornerlight" width="574" height="482" viewBox="0 0 574 482" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0537797 208.838C3.12486 113.326 132.286 88.0885 217.153 44.1619C273.962 14.7581 332.904 -10.3907 395.153 4.33766C456.796 18.9225 504.12 63.6706 534.509 119.249C567.38 179.367 586.025 247.693 563.617 312.443C537.656 387.461 487.785 462.497 410.09 478.777C333.366 494.853 271.593 430.455 206.118 387.351C126.258 334.776 -3.01894 304.401 0.0537797 208.838Z" fill="#FFC399"/>
-        </svg>  
-      </div>
-    </div>
-    <script>
-      const highlight = document.querySelector('svg#highlight');
-      const lowlight = document.querySelector('svg#lowlight');
-      const mainlight = document.querySelector('svg#mainlight');
-      const cornerlight = document.querySelector('svg#cornerlight');
-      const lerp = [4,2,2,10];
-      document.querySelector('.hero').addEventListener('mousemove', (e) => {
-        //move items
-        highlight.style.transform = `translate(${(e.screenX - highlight.getBoundingClientRect().width)/lerp[0]}px,${(e.screenY - highlight.getBoundingClientRect().height)/lerp[0]}px)`;
-        lowlight.style.transform = `translate(${(e.screenX - lowlight.getBoundingClientRect().width)/lerp[1]}px,${(e.screenY - lowlight.getBoundingClientRect().height)/lerp[1]}px)`;
-        mainlight.style.transform = `translate(${(e.screenX - mainlight.getBoundingClientRect().width)/lerp[2]}px,${(e.screenY - mainlight.getBoundingClientRect().height)/lerp[3]}px)`;
-        cornerlight.style.transform = `translate(${(e.screenX - cornerlight.getBoundingClientRect().width)/lerp[3]}px,${(e.screenY - cornerlight.getBoundingClientRect().height)/lerp[3]}px)`;
-      });
-    </script>
-  </body>
-</html>
+---
+layout: default
+---
+
+{% for block in site.data.homepage.page_sections limit: 1 %}
+  {% include {{block.template}}.html %}
+{% endfor %}
+
+<div id="about" class="section" data-scroll-section>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+</div>
+
+<div class="spacer" data-scroll-section></div>
+
+<div id="work" class="section" data-scroll-section>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+  <h2>lorem ipsum</h2>
+</div>

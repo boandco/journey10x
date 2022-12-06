@@ -1,0 +1,25 @@
+button.btn,
+a.btn {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  font-family: $font-family;
+  cursor: pointer;
+  transition: 0.4s ease;
+
+  &__dark {
+    background: $color-black;
+    color: $color-white;
+    &:hover {
+      background: lighten($color-black, 15);
+    }
+  }
+  &__circle {
+    height: 69px;
+    width: 69px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+  }
+}

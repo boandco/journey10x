@@ -1,0 +1,44 @@
+<script src="/assets/js/main.js"></script>
+<script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js" crossorigin="anonymous"></script>
+<script nomodule src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll" crossorigin="anonymous"></script>
+<script src="/assets/js/locomotive-scroll.min.js"></script>
+<script>
+  document.querySelectorAll('.letter-animate').forEach(function(e) {
+    e.innerHTML = e.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+  });
+  document.querySelectorAll('.text-animate').forEach(function(e) {
+    e.innerHTML = e.innerHTML.replace(/(?!<*b*r*>)\S*[^\s]/g, "<span class='letter'>$&</span>");
+  });
+  window.addEventListener('load', function() {
+    locomotiveInit();
+  });
+  function locomotiveInit() {
+    var scroll = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true
+    });
+    scroll.on('call', (obj) => {
+      if (obj.includes('text-animate')) {
+        let ref = obj.split('+');
+        anime.timeline({loop: false}).add({
+            targets: `#${ref[1]} .letter`,
+            translateY: [100,0],
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 1400,
+            delay: (el, i) => 30 * i
+        });
+      } else if (obj.includes('animate-in')) {
+        let ref = obj.split('+');
+        document.getElementById(ref[1]).classList.add('animated');
+      }
+    });
+
+    document.querySelectorAll('a.local').forEach((el) => {
+      el.addEventListener('click', (ev) => {
+        scroll.scrollTo(el.getAttribute('href'));
+        ev.preventDefault();
+      });
+    });
+  }
+</script>

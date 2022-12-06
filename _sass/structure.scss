@@ -1,13 +1,91 @@
+$gutter: 2em;
+$font-family: sans-serif;
+
+//Breakpoints
+$mobile: '768px';
+
+.mobile-hide {
+  @media only screen and (max-width: $mobile) {
+    display: none !important;
+  }
+}
+.mobile-only {
+  @media only screen and (min-width: $mobile) {
+    display: none !important;
+  }
+}
+.mobile-block {
+  @media only screen and (max-width: $mobile) {
+    display: block !important;
+
+    &:not(.no-margin) {
+      div {
+        margin-bottom: 3em;
+  
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 * {
   box-sizing: border-box;
+}
+html.has-scroll-smooth {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;  
 }
 body {
   margin: 0;
   padding: 0;
+  background: $color-black;
+  color: $color-white;
+  font-family: $font-family;
+}
+.gradient {
+  --gradient-color-1: #{$color-orange};
+  --gradient-color-2: #{$color-teal};
+  --gradient-color-3: #{$color-indigo};
+  --gradient-color-4: #{$color-sky};
+  pointer-events: none;
+}
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  background: $color-orange;
+  mix-blend-mode: difference;
+  transition: height 0.3s, width 0.3s;
+  transition-timing-function: ease-in-out;
+  z-index: 2;
+  z-index: 99;
+  pointer-events: none;
+
+  &.active {
+    height: 50px;
+    width: 50px;
+  }
+}
+.spacer {
   height: 100vh;
-  width: 100vw;
-  display: flex;
-  background: #000;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  background: red;
 }
