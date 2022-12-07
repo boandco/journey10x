@@ -24,14 +24,8 @@
   }
 
   &.dark {
-    padding: 0.8em 0.8em 0.8em;
-    border-radius: 50px;
-    background: rgba(lighten($color-black, 5), 0.8);
-    border: 1px solid rgba(255,255,255,0.05);
-    backdrop-filter: blur(20px);
+    mix-blend-mode: difference;
     .logo {
-      top: 2px;
-      position: relative;
       svg path {
         fill: $color-white;
       }

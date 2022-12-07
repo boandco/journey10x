@@ -29,8 +29,8 @@ if (showCursor) {
     el: document.querySelector('#cursor'),
     x: window.innerWidth/2,
     y: window.innerHeight/2,
-    w: 48,
-    h: 48,
+    w: 25,
+    h: 25,
     update: function() {
       l = this.x - this.w/2;
       t = this.y - this.h/2;

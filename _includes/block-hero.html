@@ -9,10 +9,27 @@
       </svg>        
     </a>
   </div>
-  <img id="hero-logo" src="/assets/images/JRX-3D-Emblem-Colour.png" data-scroll data-scroll-speed="2">
+  <video autoplay loop muted playsinline nocontrols data-scroll data-scroll-speed="4">
+    <source id="hero_video">
+  </video>
   <canvas class="gradient" id="hero-gradient-canvas"></canvas>
   <script>
       var hero_gradient = new Gradient()
       hero_gradient.initGradient('#hero-gradient-canvas');
+      let hero_video = document.getElementById('hero_video');
+      if (supportsHEVCAlpha()) {
+        hero_video.src = '/assets/images/j10x_logo_loop.mov';
+        hero_video.setAttribute('type', 'video/quicktime; codecs=hvc1');
+      } else {
+        hero_video.src = '/assets/images/j10x_logo_loop.webm';
+        hero_video.setAttribute('type', 'video/webm');
+      }
+      function supportsHEVCAlpha() {
+        const navigator = window.navigator;
+        const ua = navigator.userAgent.toLowerCase()
+        const hasMediaCapabilities = !!(navigator.mediaCapabilities && navigator.mediaCapabilities.decodingInfo)
+        const isSafari = ((ua.indexOf('safari') != -1) && (!(ua.indexOf('chrome')!= -1) && (ua.indexOf('version/')!= -1)))
+        return isSafari && hasMediaCapabilities
+      }
   </script>
 </div>

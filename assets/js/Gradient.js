@@ -325,7 +325,7 @@ function normalizeColor(hexCode) {
         this.conf = {
             presetName: "",
             wireframe: false,
-            density: [.06, .16],
+            density: [.1, .16],
             zoom: 1,
             rotation: 0,
             playing: true

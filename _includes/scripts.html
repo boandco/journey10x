@@ -32,6 +32,8 @@
       } else if (obj.includes('animate-in')) {
         let ref = obj.split('+');
         document.getElementById(ref[1]).classList.add('animated');
+      } else if (obj.includes('changenav')) {
+        document.getElementById('navigation').classList.add('dark');
       }
     });
 
