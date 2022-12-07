@@ -18,6 +18,7 @@
       smooth: true
     });
     scroll.on('call', (obj) => {
+      console.log(obj);
       if (obj.includes('text-animate')) {
         let ref = obj.split('+');
         anime.timeline({loop: false}).add({

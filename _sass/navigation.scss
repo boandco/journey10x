@@ -7,15 +7,37 @@
   z-index: 98;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  transition: 0.4s ease;
+
   &__items {
     display: flex;
-    gap: 2em;
+    gap: 4em;
     align-items: center;
+    font-size: 0.8em;
     a {
       text-decoration: none;
       text-transform: uppercase;
       color: $color-black;
       font-weight: 600;
+    }
+  }
+
+  &.dark {
+    padding: 0.8em 0.8em 0.8em;
+    border-radius: 50px;
+    background: rgba(lighten($color-black, 5), 0.8);
+    border: 1px solid rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    .logo {
+      top: 2px;
+      position: relative;
+      svg path {
+        fill: $color-white;
+      }
+    }
+    a {
+      color: $color-white;
     }
   }
 }

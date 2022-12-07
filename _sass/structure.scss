@@ -1,5 +1,4 @@
 $gutter: 2em;
-$font-family: sans-serif;
 
 //Breakpoints
 $mobile: '768px';
@@ -87,5 +86,46 @@ body {
 .spacer {
   height: 100vh;
   width: 100%;
-  background: red;
+  background: $color-black;
+}
+
+.section {
+  padding: 10em $gutter;
+
+  &__title {
+    text-transform: uppercase;
+    margin: 2em 0;
+    border-bottom: 1px solid darken($color-white, 80);
+    h2 {
+      font-size: 0.8em;
+      font-weight: 400;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    &.offset {
+      &__left {
+        align-items: flex-end;
+      }
+      &__right {
+        align-items: flex-start;
+      }
+    }
+    &__container {
+      max-width: 60vw;
+    }
+    p {
+      width: 100%;
+      &.heading {
+        font-size: clamp(1.8em, 3vw, 3em);
+        font-weight: 500;
+      }
+      &.description {
+        font-size: clamp(1.4em, 2vw, 2em);
+        font-weight: 300;
+      }
+    }
+  }
 }

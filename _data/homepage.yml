@@ -4,16 +4,8 @@ page_sections:
   headline: An agency that empowers, uplifts, enlightens
 - template: block-about-us
   section_title: About us
-  heading: we make content that empowers...
-  subheading: by developing creative solutions and powerful partnerships
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam convallis
-    neque in odio venenatis aliquam. Cras quis ultricies ipsum. Nam magna est, rutrum
-    sit amet tortor sed, gravida semper lorem. Mauris ultricies lectus quis justo
-    finibus sodales. Duis faucibus facilisis vehicula. Suspendisse lobortis tristique
-    iaculis. \n\nMorbi sodales enim mi, sit amet efficitur tortor sagittis in. Donec
-    rhoncus convallis urna vel mattis. Pellentesque habitant morbi tristique senectus
-    et netus et malesuada fames ac turpis egestas. Praesent lacinia mauris vel odio
-    bibendum rutrum. "
+  heading: we help brands empower, inspire and uplift, through content, events, brand development, and social media messaging, using the power of storytelling, celebrities, and innovative campaigns that rise above the noise
+  description: Journey 10X aligns brands with their core values by weaving together content, events, pop culture and messaging that empowers, uplifts and/or enlightens
 - template: block-divider
   animated_gradient: true
 - template: block-clients

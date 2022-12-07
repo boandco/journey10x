@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('/assets/fonts/NeueHaasDisplay-Light.woff') format('woff');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('/assets/fonts/NeueHaasDisplay-Roman.woff') format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('/assets/fonts/NeueHaasDisplay-Medium.woff') format('woff');
+  font-weight: 500;
+}
+
+$font-family: 'Neue Haas Display', Helvetica, Arial, sans-serif;
