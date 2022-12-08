@@ -24,41 +24,32 @@ page_sections:
   - "/assets/images/logos/fim45-logo.png"
 - template: block-work
   section_title: Work
-  heading: "(why) industry leading title here"
-  description: 'your services and what you can offer other companies copy here. Lorem
-    ipsum dolor sit amet, consectetur adipiscing elit. Nam convallis neque in odio
-    venenatis aliquam. '
-  section_image: "/assets/images/2022-10-26-services-image.jpg"
-  services:
-  - Consulting
-  - Design
-  - Production
-  - Development
+  description: Journey 10 X is a coalition of bright minds, who have each been trailblazers in their own right, throughout the media world. All the members of 10X have one shared common goal - to make the world better by telling stories that enlighten, empower and/or uplift.
   project_list:
   - template: project-template
     date: '2022-07-18 04:00:00 +0000'
-    title: Supreme
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-      non finibus diam. Praesent rhoncus tortor sit amet urna tempus, sit amet pellentesque
-      turpis condimentum. '
     display_on_homepage: true
-    image: "/assets/images/social-share.jpg"
+    title: "ESPN/State Farm - “Good Neighbor Month: Karl-Anthony Towns”"
+    media: Social Media
+    credit_title: Producer
+    credit_name: Eric Alan Donaldson
+    image: "/assets/images/work/goodneighbor.jpg"
   - template: project-template
-    date: '2022-08-11 04:00:00 +0000'
-    title: Nike
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-      non finibus diam. Praesent rhoncus tortor sit amet urna tempus, sit amet pellentesque
-      turpis condimentum. '
+    date: '2022-07-18 04:00:00 +0000'
     display_on_homepage: true
-    image: "/assets/images/social-share.jpg"
+    title: "Journey 8 - “60 Seconds With Dr. Joe Dispenza: Aubrey Marcus”"
+    media: TV/Streaming
+    credit_title: Producer
+    credit_name: Eric Alan Donaldson
+    image: "/assets/images/work/journey8-60secs.jpg"
   - template: project-template
-    date: '2022-10-20 04:00:00 +0000'
-    title: Google
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-      non finibus diam. Praesent rhoncus tortor sit amet urna tempus, sit amet pellentesque
-      turpis condimentum. '
+    date: '2022-07-18 04:00:00 +0000'
     display_on_homepage: true
-    image: "/assets/images/social-share.jpg"
+    title: "Wilson - “Thank You, Serena”"
+    media: Broadcast Commercial
+    credit_title: Director
+    credit_name: Max Gutierrez
+    image: "/assets/images/work/wilson.jpg"
 - template: block-team
   section_title: Team
   heading: our team of collectives...

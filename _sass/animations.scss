@@ -74,14 +74,13 @@ span.letter-animate {
     }
   }
   &__slide {
-    &_down {
-      transition: 0.8s ease-in-out;
-      position: relative;
-      top: -30px;
+    &_up {
+      transition: transform 0.8s ease-in-out;
+      transform: translateY(25%);
       opacity: 0;
 
       &.animated {
-        top: 0;
+        transform: translateY(0);
         opacity: 1;
       }
     }

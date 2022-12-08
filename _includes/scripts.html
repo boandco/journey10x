@@ -43,14 +43,10 @@
         ev.preventDefault();
       });
     });
-    if (document.getElementById('hero_video')) {
-      // Clamp number between two values with the following line:
-      const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
-      let hero_video = document.getElementById('hero_video');
-      scroll.on('scroll', (e) => {
-        let playbackSpeed = clamp(Math.trunc(e.speed), 0, 15);
-        hero_video.playbackRate = playbackSpeed + 1;
-      });
-    }
+    
+    // Clamp number between two values with the following line:
+    const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+    scroll.on('scroll', (e) => {
+    });
   }
 </script>

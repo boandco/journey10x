@@ -14,6 +14,14 @@ a.btn {
       background: lighten($color-black, 15);
     }
   }
+  &__light {
+    background: $color-white;
+    color: $color-black;
+    &:hover {
+      background: $color-black;
+      color: $color-white;
+    }
+  }
   &__circle {
     height: 69px;
     width: 69px;

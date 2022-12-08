@@ -1,0 +1,57 @@
+{% assign project = site.data.homepage.page_sections[include.index] %}
+<div id="work" class="section" data-scroll-section>
+  <div class="section__title">
+    <h2 class="letter-animate" id="{{ project.template }}-h2" data-scroll data-scroll-call="text-animate+{{ project.template }}-h2">{{ project.section_title }}</h2>
+  </div>
+  <div class="work__projects">
+    {% for project in project.project_list limit: 3 %}
+      {% if project.display_on_homepage %}
+        <a id="{{ project.title | slugify }}" data-scroll data-scroll-call="animate-in+{{ project.title | slugify }}" class="work__projects__project project animate__fadeIn">
+          <div class="thumbnail">
+            <button class="btn btn__circle btn__light">
+              Play
+            </button>
+            <img src="{{ project.image }}">
+          </div>
+          <div class="content">
+            <div class="information">
+              <p class="title" style="--transition-delay: 0.1s"><span>{{ project.title }}</span></p>
+              <p class="media" style="--transition-delay: 0.2s"><span>{{ project.media }}</span></p>
+              <p class="credit" style="--transition-delay: 0.3s"><span>{{ project.credit_title }}: {{ project.credit_name }}</span></p>
+            </div>
+            <div class="preview">
+              <p class="number">0{{ forloop.index }}</p>
+            </div>
+          </div>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <script>
+    let active_project = null;
+    document.querySelectorAll('.project').forEach((x) => {
+      x.addEventListener('click', () => {
+        if (active_project == x.getAttribute('id')) {
+          //Reset active
+          active_project = null;
+        } else {
+          //Not active, make active
+          if (active_project != null) {
+            document.querySelectorAll('.project.active').forEach((proj_active) => {
+              proj_active.classList.toggle('is-animating');
+              proj_active.classList.toggle('active');
+            });
+          }
+          active_project = x.getAttribute('id');
+        }
+        x.classList.toggle('is-animating');
+        x.classList.toggle('active');
+      });
+    });
+  </script>
+  <div class="section__content offset__right">
+    <div class="section__content__container">
+      <p class="description animate__fadeIn" id="{{ project.template }}-description" data-scroll data-scroll-call="animate-in+{{ project.template }}-description">{{ project.description }}</p>
+    </div>
+  </div>
+</div>
