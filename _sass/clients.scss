@@ -1,0 +1,22 @@
+.section#clients {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 6em;
+  .logo_soup:first-of-type {
+    align-self: flex-start;
+  }
+  .logo_soup:last-of-type {
+    align-self: flex-end;
+  }
+}
+.logo_soup {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8em;
+  img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+}

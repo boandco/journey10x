@@ -1,0 +1,17 @@
+<section id="clients" class="section" data-scroll-section>
+  <div class="logo_soup" data-scroll data-scroll-direction="horizontal" data-scroll-speed="4">
+    {% for logo in site.data.homepage.page_sections[include.index].client_logos %}
+      <img id="{{ logo | slugify }}-1" data-scroll src="{{ logo }}">
+    {% endfor %}
+  </div>
+  <div class="logo_soup" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-4">
+    {% for logo in site.data.homepage.page_sections[include.index].client_logos %}
+      <img id="{{ logo | slugify }}-2" data-scroll src="{{ logo }}">
+    {% endfor %}
+  </div>
+  <canvas class="gradient background" id="clients-gradient-canvas"></canvas>
+  <script>
+    let clients_gradient = new Gradient()
+    clients_gradient.initGradient('#clients-gradient-canvas');
+  </script>
+</section>

@@ -6,16 +6,22 @@ page_sections:
   section_title: About us
   heading: we help brands empower, inspire and uplift, through content, events, brand development, and social media messaging, using the power of storytelling, celebrities, and innovative campaigns that rise above the noise
   description: Journey 10X aligns brands with their core values by weaving together content, events, pop culture and messaging that empowers, uplifts and/or enlightens
-- template: block-divider
-  animated_gradient: true
 - template: block-clients
-  section_title: trusted by
   client_logos:
-  - "/assets/images/2022-10-26-group-49.png"
-  - "/assets/images/2022-10-26-group-48.png"
-  - "/assets/images/2022-10-26-group-47.png"
-  - "/assets/images/2022-10-26-group-46.png"
-  - "/assets/images/2022-10-26-group-45.png"
+  - "/assets/images/logos/wwe-logo.png"
+  - "/assets/images/logos/un-foundation.png"
+  - "/assets/images/logos/jk-livin-logo.png"
+  - "/assets/images/logos/deliver-logo.png"
+  - "/assets/images/logos/heros-journey-logo.png"
+  - "/assets/images/logos/fox-sports-logo.png"
+  - "/assets/images/logos/journey-8-logo.png"
+  - "/assets/images/logos/souce-media-fpo-logo.png"
+  - "/assets/images/logos/bkfc-logo.png"
+  - "/assets/images/logos/ahhaa-logo.png"
+  - "/assets/images/logos/boys-girls-club-logo.png"
+  - "/assets/images/logos/aspire-logo-fpo.png"
+  - "/assets/images/logos/wme-logo.png"
+  - "/assets/images/logos/fim45-logo.png"
 - template: block-work
   section_title: Work
   heading: "(why) industry leading title here"

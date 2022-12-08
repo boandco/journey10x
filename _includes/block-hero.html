@@ -9,20 +9,20 @@
       </svg>        
     </a>
   </div>
-  <video autoplay loop muted playsinline nocontrols data-scroll data-scroll-speed="4">
-    <source id="hero_video">
+  <video id="hero_video" autoplay loop muted playsinline nocontrols data-scroll data-scroll-speed="4">
+    <source id="hero_video_source">
   </video>
-  <canvas class="gradient" id="hero-gradient-canvas"></canvas>
+  <canvas class="gradient background" id="hero-gradient-canvas"></canvas>
   <script>
       var hero_gradient = new Gradient()
       hero_gradient.initGradient('#hero-gradient-canvas');
-      let hero_video = document.getElementById('hero_video');
+      let hero_video_source = document.getElementById('hero_video_source');
       if (supportsHEVCAlpha()) {
-        hero_video.src = '/assets/images/j10x_logo_loop.mov';
-        hero_video.setAttribute('type', 'video/quicktime; codecs=hvc1');
+        hero_video_source.src = '/assets/images/j10x_logo_loop.mov';
+        hero_video_source.setAttribute('type', 'video/quicktime; codecs=hvc1');
       } else {
-        hero_video.src = '/assets/images/j10x_logo_loop.webm';
-        hero_video.setAttribute('type', 'video/webm');
+        hero_video_source.src = '/assets/images/j10x_logo_loop.webm';
+        hero_video_source.setAttribute('type', 'video/webm');
       }
       function supportsHEVCAlpha() {
         const navigator = window.navigator;
