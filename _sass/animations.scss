@@ -85,4 +85,30 @@ span.letter-animate {
       }
     }
   }
+  &__text {
+    display: block;
+    height: fit-content;
+    overflow: hidden;
+    position: relative;
+
+    &__hide {
+      color: transparent;
+    }
+
+    &:before,&:after {
+      content: attr(data-content);
+      font-family: $font-family;
+      color: inherit;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+    }
+    &:before {
+      transform: translateY(0);
+    }
+    &:after {
+      transform: translateY(100%);
+    }
+  }
 }

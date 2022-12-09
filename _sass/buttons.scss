@@ -18,8 +18,7 @@ a.btn {
     background: $color-white;
     color: $color-black;
     &:hover {
-      background: $color-black;
-      color: $color-white;
+      background: lighten($color-orange, 10);
     }
   }
   &__circle {
@@ -29,5 +28,24 @@ a.btn {
     justify-content: center;
     align-items: center;
     border-radius: 100%;
+  }
+  &__scale {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform: scale(1);
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  &__text-animate {
+    &:hover {
+      span.animate__text {
+        &:before {
+          transform: translateY(-100%);
+        }
+        &:after {
+          transform: translateY(0);
+        }
+      }
+    }
   }
 }

@@ -81,6 +81,8 @@
           font-weight: 500;
           font-size: 0.8em;
           letter-spacing: 0.1em;
+          height: 120px;
+          width: 120px;
         }
         img {
           width: 100%;
@@ -115,7 +117,7 @@
               perspective: 100px;
               transition: transform 0.6s cubic-bezier(0.83, 0, 0.17, 1);
               transition-delay: var(--transition-delay);
-              transform: translateY(100%) rotate3d(1, 0, 0, -90deg);
+              transform: translateY(100%);
             }
 
             &.title {
@@ -134,25 +136,9 @@
         font-size: 2em;
         margin: 0;
         font-weight: 500;
-        color: transparent;
+        color: $color-white;
         position: relative;
         overflow: hidden;
-
-        &:before,&:after {
-          content: attr(data-content);
-          font-family: $font-family;
-          color: #fff;
-          position: absolute;
-          left: 0;
-          top: 0;
-          transition: 0.8s cubic-bezier(0.83, 0, 0.17, 1);
-        }
-        &:before {
-          transform: translateY(0);
-        }
-        &:after {
-          transform: translateY(100%);
-        }
       }
 
       &.is-animating {
@@ -171,7 +157,7 @@
         .information {
           opacity: 1;
           p span {
-            transform: translateY(0) rotate3d(1, 0, 0, 0deg);
+            transform: translateY(0);
           }
         }
         .thumbnail {

@@ -50,6 +50,14 @@ page_sections:
     credit_title: Director
     credit_name: Max Gutierrez
     image: "/assets/images/work/wilson.jpg"
+- template: block-values
+  section_title: 10x
+  values:
+  - title: goals
+  - title: reach
+  - title: engagement
+  - title: sales
+  - title: growth
 - template: block-team
   section_title: Team
   heading: our team of collectives...

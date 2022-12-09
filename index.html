@@ -2,12 +2,10 @@
 layout: default
 ---
 
-{% for block in site.data.homepage.page_sections limit: 4 %}
+{% for block in site.data.homepage.page_sections limit: 5 %}
   {% assign index = forloop.index | minus: 1 %}
   {% include {{block.template}}.html index=index %}
 {% endfor %}
-
-<div class="spacer" data-scroll-section></div>
 
 <div id="work" class="section" data-scroll-section>
   <h2>lorem ipsum</h2>
