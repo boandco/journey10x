@@ -50,6 +50,14 @@
           img {
             opacity: 1;
           }
+          p.number {
+            &:before {
+              transform: translateY(-100%);
+            }
+            &:after {
+              transform: translateY(0);
+            }
+          }
         }
       }
       
@@ -126,6 +134,25 @@
         font-size: 2em;
         margin: 0;
         font-weight: 500;
+        color: transparent;
+        position: relative;
+        overflow: hidden;
+
+        &:before,&:after {
+          content: attr(data-content);
+          font-family: $font-family;
+          color: #fff;
+          position: absolute;
+          left: 0;
+          top: 0;
+          transition: 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+        }
+        &:before {
+          transform: translateY(0);
+        }
+        &:after {
+          transform: translateY(100%);
+        }
       }
 
       &.is-animating {
@@ -149,6 +176,14 @@
         }
         .thumbnail {
           cursor: default;
+        }
+        p.number {
+          &:before {
+            transform: translateY(-100%);
+          }
+          &:after {
+            transform: translateY(0);
+          }
         }
       }
 
