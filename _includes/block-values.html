@@ -2,9 +2,9 @@
 <div id="values" class="section" data-scroll-section>
   <div class="text-fade" data-scroll data-scroll-sticky data-scroll-target="#values"></div>
   <h2 id="values-h2" data-scroll data-scroll-sticky data-scroll-target="#values">{{ section.section_title }}</h2>
-  <ul>
+  <ul data-scroll data-scroll-speed="-1">
     {% for value in section.values %}
-      <li data-scroll data-scroll-speed="{{ forloop.index }}">{{ value.title }}</li>
+      <li>{{ value.title }}</li>
     {% endfor %}
   </ul>
 </div>

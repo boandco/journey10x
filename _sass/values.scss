@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
+  margin-bottom: 20em;
+
   .text-fade {
     position: absolute;
     top: 0;
@@ -15,10 +17,10 @@
   h2 {
     align-self: flex-start;
     justify-self: flex-end;
-    font-size: clamp(2em, 30vw, 25em);
+    font-size: clamp(2em, 25vw, 25em);
     text-align: right;
     width: fit-content;
-    margin: 0.2em 0;
+    margin: 0.3em 0;
     background: linear-gradient(20deg, $color-orange 40%, $color-indigo 60%, $color-teal 80%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -28,7 +30,7 @@
     font-size: 6em;
     list-style: none;
     font-weight: 500;
-    padding: 50vh 0 0 1em;
+    padding: 50vh 0 10vh 1em;
     li {
       margin: 10vh 0;
     }

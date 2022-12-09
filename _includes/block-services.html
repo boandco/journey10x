@@ -1,0 +1,45 @@
+{% assign section = site.data.homepage.page_sections[include.index] %}
+<div id="services" class="section" data-scroll-section>
+  <div class="image__right animate__fadeIn" id="services-img" data-scroll data-scroll-call="animate-in+services-img">
+    <video id="services_video"autoplay loop muted playsinline nocontrols>
+      <source id="services_video_source">
+    </video>
+    <canvas id="services-gradient-canvas" class="gradient background"></canvas>
+    <script>
+      var services_gradient = new Gradient()
+      services_gradient.initGradient('#services-gradient-canvas');
+      let services_video_source = document.getElementById('services_video_source');
+      if (supportsHEVCAlpha()) {
+        services_video_source.src = '/assets/images/j10x_logo_loop.mov';
+        services_video_source.setAttribute('type', 'video/quicktime; codecs=hvc1');
+      } else {
+        services_video_source.src = '/assets/images/j10x_logo_loop.webm';
+        services_video_source.setAttribute('type', 'video/webm');
+      }
+    </script>
+  </div>
+  <ul class="services">
+    {% for service in section.services %}
+      <li class="services__item" id="{{ service.title | slugify }}">
+        <button class="btn service_trigger" data-for="{{ service.title | slugify }}">
+          <span class="letter-animate" id="{{ service.title | slugify }}-title" data-scroll data-scroll-call="text-animate+{{ service.title | slugify }}-title">{{ service.title }}</span>
+          <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.94214 0L9.94214 23" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+            <path d="M18.8781 15.1178L9.94221 24.06L1 15.1178" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+          </svg>            
+        </button>
+        <div class="panel">
+          <p>{{ service.description }}</p>
+        </div>
+      </li>
+    {% endfor %}
+    <script>
+      document.querySelectorAll('.service_trigger').forEach((x) => {
+        x.addEventListener('click', () => {
+          let target = x.getAttribute('data-for');
+          document.getElementById(`${target}`).classList.toggle('active');
+        })
+      });
+    </script>
+  </ul>
+</div>

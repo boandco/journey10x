@@ -58,6 +58,19 @@ page_sections:
   - title: engagement
   - title: sales
   - title: growth
+- template: block-services
+  section_title: Our services
+  services:
+  - title: Brand Development
+    description: We can help you make innovative brand campaigns that rise above the noise and empower, uplift and/or enlighten the world.
+  - title: Production
+    description: We are a full scale production house, soup to nuts, from seed to distribution.
+  - title: Social Media Marketing
+    description: We know how to make social media rise above the noise.
+  - title: Management
+    description: We manage talent that cares about making the world better.
+  - title: Events
+    description: We produce full scale events that empower, enlighten and/or uplift the world.
 - template: block-team
   section_title: Team
   heading: our team of collectives...
