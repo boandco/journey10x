@@ -25,31 +25,6 @@ page_sections:
 - template: block-work
   section_title: Work
   description: Journey 10 X is a coalition of bright minds, who have each been trailblazers in their own right, throughout the media world. All the members of 10X have one shared common goal - to make the world better by telling stories that enlighten, empower and/or uplift.
-  project_list:
-  - template: project-template
-    date: '2022-07-18 04:00:00 +0000'
-    display_on_homepage: true
-    title: "ESPN/State Farm - “Good Neighbor Month: Karl-Anthony Towns”"
-    media: Social Media
-    credit_title: Producer
-    credit_name: Eric Alan Donaldson
-    image: "/assets/images/work/goodneighbor.jpg"
-  - template: project-template
-    date: '2022-07-18 04:00:00 +0000'
-    display_on_homepage: true
-    title: "Journey 8 - “60 Seconds With Dr. Joe Dispenza: Aubrey Marcus”"
-    media: TV/Streaming
-    credit_title: Producer
-    credit_name: Eric Alan Donaldson
-    image: "/assets/images/work/journey8-60secs.jpg"
-  - template: project-template
-    date: '2022-07-18 04:00:00 +0000'
-    display_on_homepage: true
-    title: "Wilson - “Thank You, Serena”"
-    media: Broadcast Commercial
-    credit_title: Director
-    credit_name: Max Gutierrez
-    image: "/assets/images/work/wilson.jpg"
 - template: block-values
   section_title: 10x
   values:
