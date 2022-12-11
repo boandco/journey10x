@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% for block in site.data.homepage.page_sections limit: 6 %}
+{% for block in site.data.homepage.page_sections limit: 7 %}
   {% assign index = forloop.index | minus: 1 %}
   {% include {{block.template}}.html index=index %}
 {% endfor %}

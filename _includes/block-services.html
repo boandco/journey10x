@@ -18,28 +18,16 @@
       }
     </script>
   </div>
-  <ul class="services">
+  <ul class="accordion static">
     {% for service in section.services %}
-      <li class="services__item" id="{{ service.title | slugify }}">
-        <button class="btn service_trigger" data-for="{{ service.title | slugify }}">
+      <li class="accordion__item" id="{{ service.title | slugify }}">
+        <div class="title" data-for="{{ service.title | slugify }}">
           <span class="letter-animate" id="{{ service.title | slugify }}-title" data-scroll data-scroll-call="text-animate+{{ service.title | slugify }}-title">{{ service.title }}</span>
-          <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9.94214 0L9.94214 23" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
-            <path d="M18.8781 15.1178L9.94221 24.06L1 15.1178" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
-          </svg>            
-        </button>
+        </div>
         <div class="panel">
-          <p>{{ service.description }}</p>
+          <p class="animate__fadeIn" id="{{ service.title | slugify }}-description" data-scroll data-scroll-call="animate-in+{{ service.title | slugify }}-description">{{ service.description }}</p>
         </div>
       </li>
     {% endfor %}
-    <script>
-      document.querySelectorAll('.service_trigger').forEach((x) => {
-        x.addEventListener('click', () => {
-          let target = x.getAttribute('data-for');
-          document.getElementById(`${target}`).classList.toggle('active');
-        })
-      });
-    </script>
   </ul>
 </div>

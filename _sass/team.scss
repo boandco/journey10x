@@ -1,0 +1,22 @@
+.section#team {
+  .team__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 75%;
+    margin: 4em 0;
+
+    p {
+      margin: 0;
+    }
+
+    p.heading {
+      width: 50%;
+      font-size: clamp(1.8em, 5vw, 6em);
+      text-align: left;
+    }
+    p.description {
+      text-align: right;
+    }
+  }
+}

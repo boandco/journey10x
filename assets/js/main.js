@@ -51,3 +51,12 @@ if (showCursor) {
     return (1-amt)*start+amt*end;
   }
 }
+
+if (document.querySelector('.accordion_trigger')) {
+  document.querySelectorAll('.accordion_trigger').forEach((x) => {
+    x.addEventListener('click', () => {
+      let target = x.getAttribute('data-for');
+      document.getElementById(`${target}`).classList.toggle('active');
+    })
+  });
+}

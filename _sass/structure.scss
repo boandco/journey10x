@@ -142,3 +142,92 @@ body {
     }
   }
 }
+.accordion {
+  list-style: none;
+  padding: 0;
+  width: 50%;
+  border-top: 1px solid darken($color-white, 80);
+
+  &.large {
+    width: 75%;
+  }
+
+  $padding: 36px;
+  &__item {
+    border-bottom: 1px solid darken($color-white, 80);
+    .title, button {
+      display: flex;
+      justify-content: space-between;
+      transition: 0.4s ease;
+      background: transparent;
+      font-size: 2em;
+      width: 100%;
+      color: $color-white;
+      font-family: $font-family;
+      font-weight: 500;
+      padding: 1.4em 0 0.3em;
+      text-transform: lowercase;
+
+      &.grid {
+        display: grid;
+        grid-template-columns: 50% 1fr 25px;
+        align-items: center;
+        &:last-child {
+          align-self: flex-end;
+        }
+      }
+
+      svg {
+        transition: 0.4s ease;
+        opacity: 0;
+      }
+
+      &:hover {
+        padding: 1.4em $padding 0.3em;
+        svg {
+          opacity: 1;
+        }
+      }
+
+      .role {
+        font-size: 0.6em;
+        font-weight: 300;
+        text-transform: none;
+      }
+    }
+    .panel {
+      font-size: 1.4em;
+      font-weight: 300;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: 0.6s ease;
+      padding: 0 $padding 1.4em;
+    }
+
+    &.active {
+      button {
+        padding: 1.4em $padding 0.3em;
+        svg {
+          transform: rotate(180deg);
+          opacity: 1;
+        }
+      }
+      .panel {
+        max-height: 500px;
+        opacity: 1;
+        padding-bottom: 2em;
+      }
+    }
+  }
+  &.static {
+    .title, button {
+      padding: 1.4em $padding 0.3em;
+    }
+    .panel {
+      max-height: 500px;
+      opacity: 1;
+      padding-bottom: 2em;
+    }
+  }
+}

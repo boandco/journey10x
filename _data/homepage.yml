@@ -73,19 +73,8 @@ page_sections:
     description: We produce full scale events that empower, enlighten and/or uplift the world.
 - template: block-team
   section_title: Team
-  heading: our team of collectives...
-  subheading: are passionate people dedicated to making empowerment content.
-  team_members:
-  - name: Tommy Ronson
-    job_title: Creative Director
-  - name: Andrew Wickerson
-    job_title: Creative Direction
-  - name: Tommy Ronson
-    job_title: Creative Director
-  - name: Tommy Ronson
-    job_title: Creative Director
-  - name: Tommy Ronson
-    job_title: Creative Director
+  heading: our team is dedicated...
+  description: to making empowerment content.
 - template: block-divider
   animated_gradient: true
 - template: block-locations

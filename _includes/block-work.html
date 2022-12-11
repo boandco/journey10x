@@ -4,7 +4,8 @@
     <h2 class="letter-animate" id="{{ project.template }}-h2" data-scroll data-scroll-call="text-animate+{{ project.template }}-h2">{{ project.section_title }}</h2>
   </div>
   <div class="work__projects">
-    {% for project in project.project_list limit: 3 %}
+    {% assign projects = site.projects | sort: 'order' %}
+    {% for project in projects limit: 3 %}
       {% if project.display_on_homepage %}
         <a id="{{ project.title | slugify }}" data-scroll data-scroll-call="animate-in+{{ project.title | slugify }}" class="work__projects__project project animate__fadeIn">
           <div class="thumbnail">
