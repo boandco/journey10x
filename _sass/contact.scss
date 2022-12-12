@@ -1,0 +1,19 @@
+.section#contact {
+  color: $color-black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4em;
+  h2 {
+    max-width: 40%;
+    margin: 0;
+  }
+  p {
+    font-size: 1.4em;
+    margin: 0;
+    font-weight: 300;
+    a {
+      font-weight: 500;
+    }
+  }
+}

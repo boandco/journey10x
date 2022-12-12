@@ -1,7 +1,7 @@
 ---
 contact:
   phone_number: 888-373-8888
-  email: info@journey10x.com
+  email: 10x@journey10x.com
   social_media:
   - url: https://instagram.com
     social_network: Instagram
@@ -9,4 +9,4 @@ contact:
     social_network: Facebook
   - url: https://youtube.com
     social_network: YouTube
-copyright: COPYRIGHT © 2022 Journey 10X
+copyright: "COPYRIGHT © {{ 'now' | date: '%Y' }} Journey 10X"

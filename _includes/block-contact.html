@@ -1,0 +1,10 @@
+{% assign section = site.data.homepage.page_sections[include.index] %}
+<section id="contact" class="section contact divider" data-scroll-section>
+  <h2 class="text-animate" id="contact-h2" data-scroll data-scroll-call="text-animate+contact-h2">{{ section.heading }}</h2>
+  <p class="animate__fadeIn" id="contact-p" data-scroll data-scroll-call="animate-in+contact-p">send us an <a href="mailto:{{ section.email }}">email</a> to learn more</p>
+  <canvas class="gradient background" id="contact-gradient-canvas"></canvas>
+  <script>
+    let contact_gradient = new Gradient()
+    contact_gradient.initGradient('#contact-gradient-canvas');
+  </script>
+</section>

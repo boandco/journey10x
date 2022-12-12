@@ -19,7 +19,6 @@
       getSpeed: true
     });
     scroll.on('call', (obj) => {
-      console.log(obj);
       if (obj.includes('text-animate')) {
         let ref = obj.split('+');
         anime.timeline({loop: false}).add({
@@ -37,11 +36,22 @@
         document.getElementById('navigation').classList.add('dark');
       }
     });
+    if (document.querySelector('.rotate_on_scroll')) {
+      let rotation = 0;
+      scroll.on('scroll', (e) => {
+        rotation += e.speed / 12;
+        document.querySelector('.rotate_on_scroll').style.transform = `rotate(${ rotation }deg)`;
+      });
+    }
     document.querySelectorAll('a.local').forEach((el) => {
       el.addEventListener('click', (ev) => {
         scroll.scrollTo(el.getAttribute('href'));
         ev.preventDefault();
       });
     });
+  }
+  if (document.querySelector('.footer-spacer')) {
+    console.log(document.querySelector('footer').clientHeight);
+    document.querySelector('.footer-spacer').style.height = `${document.querySelector('footer').clientHeight}px`;
   }
 </script>

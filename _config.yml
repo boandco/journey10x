@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Journey10X
+title: Journey 10X
 email: info@journey10x.com
 description: >- # this means to ignore newlines until "baseurl:"
   Journey 10X aligns brands with their core values by weaving together content, events, pop culture and messaging that empowers, uplifts and/or enlightens

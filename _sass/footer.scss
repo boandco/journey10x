@@ -1,0 +1,47 @@
+.footer {
+  background: $color-off-white;
+  color: $color-black;
+  width: 100%;
+  padding: $gutter;
+  z-index: -1;
+
+  .sitemap {
+    display: grid;
+    grid-template-columns: 50% 1fr 1fr;
+    padding: $gutter 0;
+    text-transform: uppercase;
+
+    &__links {
+      list-style: none;
+      padding: 0;
+      li {
+        margin: 1em 0;
+        a {
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    &__contact {
+      &__socials {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 1em;
+      }
+    }
+  }
+
+  .copyright {
+    border-top: 1px solid lighten($color-black, 40);
+    padding-top: $gutter / 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__info {
+      text-transform: uppercase;
+    }
+  }
+}

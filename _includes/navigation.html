@@ -14,10 +14,8 @@
     </svg>      
   </a>
   <nav class="navigation__items">
-    <a href="#home" class="local">Home</a>
-    <a href="#about" class="local">About</a>
-    <a href="#work" class="local">Work</a>
-    <a href="#team" class="local">Team</a>
-    <a href="#contact" class="local">Contact</a>
+    {% for link in site.data.linklists.main %}
+      <a href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% else %}class="local"{% endif %}>{{ link.title }}</a>
+    {% endfor %}
   </nav>
 </div>

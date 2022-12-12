@@ -21,6 +21,13 @@ a.btn {
       background: lighten($color-orange, 10);
     }
   }
+  &__grey {
+    background: darken($color-off-white, 5);
+    color: $color-black;
+    &:hover {
+      background: darken($color-off-white, 10);
+    }
+  }
   &__circle {
     height: 69px;
     width: 69px;
@@ -28,6 +35,10 @@ a.btn {
     justify-content: center;
     align-items: center;
     border-radius: 100%;
+    &.small {
+      height: 47px;
+      width: 47px;
+    }
   }
   &__scale {
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
