@@ -39,7 +39,7 @@
     if (document.querySelector('.rotate_on_scroll')) {
       let rotation = 0;
       scroll.on('scroll', (e) => {
-        rotation += e.speed / 12;
+        rotation += e.speed / 6;
         document.querySelector('.rotate_on_scroll').style.transform = `rotate(${ rotation }deg)`;
       });
     }
@@ -49,9 +49,5 @@
         ev.preventDefault();
       });
     });
-  }
-  if (document.querySelector('.footer-spacer')) {
-    console.log(document.querySelector('footer').clientHeight);
-    document.querySelector('.footer-spacer').style.height = `${document.querySelector('footer').clientHeight}px`;
   }
 </script>

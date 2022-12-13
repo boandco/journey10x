@@ -1,7 +1,7 @@
 {% assign section = site.data.homepage.page_sections[include.index] %}
 <div id="home" class="section hero" data-scroll-section>
   <div class="content" data-scroll>
-    <h1 id="hero-h1" class="text-animate" data-scroll data-scroll-call="text-animate+hero-h1">{{ section.headline }}</h1>
+    <h1 id="hero-h1" class="text-animate" data-scroll data-scroll-call="text-animate+hero-h1" data-scroll-speed="2">{{ section.headline }}</h1>
     <a href="#about" class="btn btn__circle btn__dark btn__scale local">
       <span class="visually-hidden">Scroll to content</span>
       <svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -10,20 +10,14 @@
       </svg>
     </a>
   </div>
-  <video id="hero_video" autoplay loop muted playsinline nocontrols data-scroll data-scroll-speed="2">
-    <source id="hero_video_source">
+  <div class="blob" id="hero_blob"></div>
+  <video class="background" id="hero_video" autoplay loop muted playsinline nocontrols preload="auto">
+    <source src="/assets/images/J10X_HERO.webm" type="video/webm">
   </video>
-  <canvas class="gradient background" id="hero-gradient-canvas"></canvas>
   <script>
-      var hero_gradient = new Gradient()
-      hero_gradient.initGradient('#hero-gradient-canvas');
-      let hero_video_source = document.getElementById('hero_video_source');
-      if (supportsHEVCAlpha()) {
-        hero_video_source.src = '/assets/images/j10x_logo_loop.mov';
-        hero_video_source.setAttribute('type', 'video/quicktime; codecs=hvc1');
-      } else {
-        hero_video_source.src = '/assets/images/j10x_logo_loop.webm';
-        hero_video_source.setAttribute('type', 'video/webm');
-      }
+      let blob = document.getElementById('hero_blob');
+      document.querySelector('.hero').addEventListener('mousemove', (e) => {
+        blob.style.transform = `translate(${ e.clientX / 2 }px, ${ e.clientY / 2 }px)`;
+      });
   </script>
 </div>

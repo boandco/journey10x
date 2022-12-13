@@ -1,4 +1,5 @@
 .hero {
+  background: $color-indigo;
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -24,6 +25,20 @@
     }
   }
 
+  .blob {
+    height: 80vh;
+    width: auto;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background: $color-orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(200px);
+    mix-blend-mode: hard-light;
+    pointer-events: none;
+  }
+
   img,video {
     position: absolute;
     bottom: -35vh;
@@ -34,5 +49,13 @@
     height: auto;
     pointer-events: none;
     transform: left 0.2s ease, top 0.2s ease;
+
+    &.background {
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
   }
 }

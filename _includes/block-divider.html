@@ -1,9 +1,7 @@
 {% assign section = site.data.homepage.page_sections[include.index] %}
 <section id="divider-{{ include.index }}" class="section divider" data-scroll-section>
   <h2 class="text-animate" id="divider-{{ include.index }}-h2" data-scroll data-scroll-call="text-animate+divider-{{ include.index }}-h2">{{ section.section_title }}</h2>
-  <canvas class="gradient background" id="divider-{{ include.index }}-gradient-canvas"></canvas>
-  <script>
-    let divider_{{ include.index }}_gradient = new Gradient()
-    divider_{{ include.index }}_gradient.initGradient('#divider-{{ include.index }}-gradient-canvas');
-  </script>
+  <video class="background" id="divider_video" autoplay loop muted playsinline nocontrols preload="auto">
+    <source src="/assets/images/J10X_GRADIENT.webm" type="video/webm">
+  </video>
 </section>

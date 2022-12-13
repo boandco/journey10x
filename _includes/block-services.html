@@ -1,22 +1,9 @@
 {% assign section = site.data.homepage.page_sections[include.index] %}
 <div id="services" class="section flex" data-scroll-section>
   <div class="image__right animate__fadeIn" id="services-img" data-scroll data-scroll-call="animate-in+services-img">
-    <video id="services_video"autoplay loop muted playsinline nocontrols>
-      <source id="services_video_source">
+    <video id="services_video" autoplay loop muted playsinline nocontrols>
+      <source id="services_video_source" src="/assets/images/J10X_SQUARE.webm" type="video/webm">
     </video>
-    <canvas id="services-gradient-canvas" class="gradient background"></canvas>
-    <script>
-      var services_gradient = new Gradient()
-      services_gradient.initGradient('#services-gradient-canvas');
-      let services_video_source = document.getElementById('services_video_source');
-      if (supportsHEVCAlpha()) {
-        services_video_source.src = '/assets/images/j10x_logo_loop.mov';
-        services_video_source.setAttribute('type', 'video/quicktime; codecs=hvc1');
-      } else {
-        services_video_source.src = '/assets/images/j10x_logo_loop.webm';
-        services_video_source.setAttribute('type', 'video/webm');
-      }
-    </script>
   </div>
   <ul class="accordion static">
     {% for service in section.services %}

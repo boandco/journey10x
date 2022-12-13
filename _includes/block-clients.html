@@ -10,9 +10,7 @@
       <img id="{{ logo | slugify }}-2" data-scroll src="{{ logo }}">
     {% endfor %}
   </div>
-  <canvas class="gradient background" id="clients-gradient-canvas"></canvas>
-  <script>
-    let clients_gradient = new Gradient()
-    clients_gradient.initGradient('#clients-gradient-canvas');
-  </script>
+  <video class="background" id="clients_video" autoplay loop muted playsinline nocontrols preload="auto">
+    <source src="/assets/images/J10X_GRADIENT.webm" type="video/webm">
+  </video>
 </section>
