@@ -5,5 +5,6 @@
   credit_title: Director
   credit_name: Max Gutierrez
   image: "/assets/images/work/wilson.jpg"
+  source: "/assets/images/work/wilson__thank_you_serena.webm"
   order: 3
 ---

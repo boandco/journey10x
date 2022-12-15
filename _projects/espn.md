@@ -8,5 +8,6 @@
   credit_title: Producer
   credit_name: Eric Alan Donaldson
   image: "/assets/images/work/goodneighbor.jpg"
+  source: "/assets/images/work/OMAR_KAT_SURPRISE.webm"
   order: 1
 ---

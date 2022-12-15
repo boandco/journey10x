@@ -5,5 +5,6 @@
   credit_title: Producer
   credit_name: Eric Alan Donaldson
   image: "/assets/images/work/journey8-60secs.jpg"
+  source: "/assets/images/work/60_Seconds_with_Dr_Joe_Aubrey_Marcus.webm"
   order: 2
 ---
