@@ -11,13 +11,16 @@
     </a>
   </div>
   <div class="blob" id="hero_blob"></div>
+  <div class="blob background" id="hero_blob_bg"></div>
   <video class="background" id="hero_video" autoplay loop muted playsinline nocontrols preload="auto">
     <source src="/assets/images/J10X_HERO.webm" type="video/webm">
   </video>
   <script>
       let blob = document.getElementById('hero_blob');
+      let blob_bg = document.getElementById('hero_blob_bg');
       document.querySelector('.hero').addEventListener('mousemove', (e) => {
         blob.style.transform = `translate(${ e.clientX / 2 }px, ${ e.clientY / 2 }px)`;
+        blob_bg.style.transform = `translate(${ e.clientX / 4 }px, ${ e.clientY / 4 }px)`;
       });
   </script>
 </div>
