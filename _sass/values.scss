@@ -4,6 +4,12 @@
   position: relative;
   margin-bottom: 20em;
 
+  @media screen and (max-width: $break-mobile) {
+    margin-bottom: 0;
+    grid-template-columns: 50% 50%;
+    width: 100vw;
+  }
+
   .text-fade {
     position: absolute;
     top: 0;
@@ -12,6 +18,15 @@
     height: 100vh;
     background: linear-gradient(360deg, $color-black 15%, rgba(0, 0, 0, 0) 50%, $color-black 85%);
     z-index: 1;
+    
+    @media screen and (max-width: $break-mobile) {
+      background: linear-gradient(360deg, $color-black 30%, rgba(0, 0, 0, 0) 50%, $color-black 70%);
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      right: 0;
+      width: 100%;
+    }
   }
 
   h2 {
@@ -25,6 +40,17 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @media screen and (max-width: $break-mobile) {
+      position: sticky;
+      position: -webkit-sticky;
+      top: calc(50% - 15vw);
+      left: 0;
+      text-align: left;
+      font-size: clamp(2em, 20vw, 25em);
+      z-index: 2;
+      justify-self: flex-start;
+    }
   }
   ul {
     font-size: 6em;
@@ -33,6 +59,16 @@
     padding: 50vh 0 10vh 1em;
     li {
       margin: 10vh 0;
+    }
+    @media screen and (max-width: $break-mobile) {
+      top: -45vh;
+      position: relative;
+      padding: 0;
+      padding-left: 50vw;
+      font-size: clamp(1em, 6vw, 10em);
+      li {
+        margin: 10vh 0;
+      }
     }
   }
 }

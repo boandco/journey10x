@@ -1,15 +1,16 @@
 .section#services {
-  
   .image__right {
     aspect-ratio: 1/1;
     width: 40%;
     height: auto;
     position: relative;
-
     video {
       height: 100%;
       width: 100%;
       object-fit: cover;
+    }
+    @media screen and (max-width: $break-mobile) {
+      width: 100%;
     }
   }
 }

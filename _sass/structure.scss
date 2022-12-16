@@ -1,20 +1,20 @@
 $gutter: 4em;
 
 //Breakpoints
-$mobile: '768px';
+$break-mobile: '1024px';
 
 .mobile-hide {
-  @media only screen and (max-width: $mobile) {
+  @media only screen and (max-width: $break-mobile) {
     display: none !important;
   }
 }
 .mobile-only {
-  @media only screen and (min-width: $mobile) {
+  @media only screen and (min-width: $break-mobile) {
     display: none !important;
   }
 }
 .mobile-block {
-  @media only screen and (max-width: $mobile) {
+  @media only screen and (max-width: $break-mobile) {
     display: block !important;
 
     &:not(.no-margin) {
@@ -30,6 +30,7 @@ $mobile: '768px';
 }
 
 .wrapper[data-scroll-container] {
+  width: 100vw;
   perspective: 1px;
 }
 .visually-hidden {
@@ -43,6 +44,10 @@ $mobile: '768px';
 }
 * {
   box-sizing: border-box;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 html.has-scroll-smooth {
   overflow: hidden;
@@ -109,6 +114,10 @@ a {
   position: relative;
   background: $color-black;
 
+  @media screen and (max-width: $break-mobile) {
+    padding: 5em ($gutter / 2);
+  }
+
   &__title {
     text-transform: uppercase;
     margin: 2em 0;
@@ -124,6 +133,10 @@ a {
     justify-content: space-between;
     align-items: flex-start;
     gap: 4em;
+    @media screen and (max-width: $break-mobile) {
+      gap: 2em;
+      flex-direction: column;
+    }
   }
 
   &__content {
@@ -139,6 +152,9 @@ a {
     }
     &__container {
       max-width: 60vw;
+      @media screen and (max-width: $break-mobile) {
+        max-width: unset;
+      }
     }
     p {
       width: 100%;
@@ -163,6 +179,13 @@ a {
     width: 75%;
   }
 
+  @media screen and (max-width: $break-mobile) {
+    width: 100%;
+    &.large {
+      width: 100%;
+    }
+  }
+
   $padding: 36px;
   &__item {
     border-bottom: 1px solid darken($color-white, 80);
@@ -179,6 +202,10 @@ a {
       padding: 1.4em 0 0.3em;
       text-transform: lowercase;
 
+      @media screen and (max-width: $break-mobile) {
+        font-size: 1.6em;
+      }
+
       &.grid {
         display: grid;
         grid-template-columns: 50% 1fr 25px;
@@ -186,11 +213,19 @@ a {
         &:last-child {
           align-self: flex-end;
         }
+        @media screen and (max-width: $break-mobile) {
+          grid-template-columns: 1fr 25px;
+          grid-template-rows: 1fr 1fr;
+        }
       }
 
       svg {
         transition: 0.4s ease;
         opacity: 0;
+
+        @media screen and (max-width: $break-mobile) {
+          opacity: 1;
+        }
       }
 
       &:hover {
@@ -198,12 +233,19 @@ a {
         svg {
           opacity: 1;
         }
+
+        @media screen and (max-width: $break-mobile) {
+          padding: 1.4em 0 0.3em;
+        }
       }
 
       .role {
         font-size: 0.6em;
         font-weight: 300;
         text-transform: none;
+        @media screen and (max-width: $break-mobile) {
+          grid-row: 2;
+        }
       }
     }
     .panel {
@@ -216,6 +258,11 @@ a {
       padding: 0 $padding 1.4em;
       color: #AAA;
       letter-spacing: 0.02em;
+
+      @media screen and (max-width: $break-mobile) {
+        font-size: 1em;
+        padding: 0 0 1.4em;
+      }
     }
     &.active {
       button {
@@ -224,9 +271,12 @@ a {
           transform: rotate(180deg);
           opacity: 1;
         }
+        @media screen and (max-width: $break-mobile) {
+          padding: 1.4em 0 0.3em;
+        }
       }
       .panel {
-        max-height: 500px;
+        max-height: 15000px;
         opacity: 1;
         padding-bottom: 2em;
       }
@@ -257,7 +307,7 @@ a {
       padding: 1.4em 0 0.3em;
     }
     .panel {
-      max-height: 500px;
+      max-height: 15000px;
       opacity: 1;
       padding: 0 0 1em;
     }
@@ -269,6 +319,16 @@ a {
     font-size: clamp(1.8em, 5vw, 6em);
     color: $color-black;
     max-width: 70%;
+  }
+  h2, p {
+    position: relative;
+    z-index: 3;
+  }
+  @media screen and (max-width: $break-mobile) {
+    padding: $gutter ($gutter / 2);
+    h2 {
+      max-width: 90%;
+    }
   }
 }
 .loading_screen {
@@ -322,7 +382,7 @@ video.background {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 0;
   object-fit: cover;
   pointer-events: none;
 }

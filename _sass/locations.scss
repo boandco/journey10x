@@ -8,5 +8,19 @@
       width: 80%;
       height: auto;
     }
+    @media screen and (max-width: $break-mobile) {
+      width: 100%;
+
+      svg {
+        animation: 25s spinLogo infinite linear;
+        @keyframes spinLogo {
+          from {
+            transform: rotate(0deg);
+          } to {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
   }
 }

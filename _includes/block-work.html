@@ -34,25 +34,27 @@
   </div>
   <script>
     let active_project = null;
-    document.querySelectorAll('.project').forEach((x) => {
-      x.addEventListener('click', () => {
-        if (active_project == x.getAttribute('id')) {
-          //Reset active
-          active_project = null;
-        } else {
-          //Not active, make active
-          if (active_project != null) {
-            document.querySelectorAll('.project.active').forEach((proj_active) => {
-              proj_active.classList.toggle('is-animating');
-              proj_active.classList.toggle('active');
-            });
+    if (window.innerWidth > 1024) {
+      document.querySelectorAll('.project').forEach((x) => {
+        x.addEventListener('click', () => {
+          if (active_project == x.getAttribute('id')) {
+            //Reset active
+            active_project = null;
+          } else {
+            //Not active, make active
+            if (active_project != null) {
+              document.querySelectorAll('.project.active').forEach((proj_active) => {
+                proj_active.classList.toggle('is-animating');
+                proj_active.classList.toggle('active');
+              });
+            }
+            active_project = x.getAttribute('id');
           }
-          active_project = x.getAttribute('id');
-        }
-        x.classList.toggle('is-animating');
-        x.classList.toggle('active');
+          x.classList.toggle('is-animating');
+          x.classList.toggle('active');
+        });
       });
-    });
+    }
     document.querySelectorAll('.video_modal_open').forEach((proj) => {
       proj.addEventListener('click', () => {
         let modal = document.querySelector('.video_modal');

@@ -9,14 +9,48 @@
   .logo_soup:last-of-type {
     align-self: flex-end;
   }
+
+  @media screen and (max-width: $break-mobile) {
+    gap: 3em;
+
+    .logo_soup:first-of-type {
+      animation: 30s move-left infinite linear;
+    }
+    .logo_soup:last-of-type {
+      animation: 30s move-right infinite linear;
+    }
+
+    @keyframes move-left {
+      from {
+        transform: translateX(0);
+      } to {
+        transform: translateX(-100%);
+      }
+    }
+    @keyframes move-right {
+      from {
+        transform: translate(0);
+      } to {
+        transform: translateX(100%);
+      }
+    }
+  }
 }
 .logo_soup {
   display: flex;
   flex-wrap: nowrap;
   gap: 8em;
+  z-index: 3;
   img {
     width: auto;
     height: auto;
     object-fit: contain;
+  }
+
+  @media screen and (max-width: $break-mobile) {
+    gap: 10vw;
+    img {
+      height: 5vw;
+    }
   }
 }

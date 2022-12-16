@@ -13,9 +13,24 @@
       <path d="M135.492 9.04122L130.368 0.40332H134.117L137.602 6.62261H137.774L141.27 0.40332H144.824L139.539 9.09881L144.79 17.8058H141.167L137.556 11.7708H137.407L133.796 17.8058H130.379L135.515 9.04122H135.492Z" fill="black"/>
     </svg>      
   </a>
+  <div class="mobile-only">
+    <button class="btn menu_trigger" id="menu_button">
+      <span class="visually-hidden">Menu</span>
+    </button>
+  </div>
   <nav class="navigation__items">
     {% for link in site.data.linklists.main %}
-      <a href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% else %}class="local"{% endif %}>{{ link.title }}</a>
+      <a href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% else %}class="local menu_trigger"{% endif %} style="--transition-delay: 0.{{ forloop.index }}s">{{ link.title }}</a>
     {% endfor %}
   </nav>
+  <script>
+    document.querySelectorAll('.menu_trigger').forEach((x) => {
+      x.addEventListener('click', () => {
+        let menu = document.querySelector('.navigation__items');
+        menu.classList.toggle('active');
+        document.getElementById('navigation').classList.toggle('menu_opened');
+        document.getElementById('menu_button').classList.toggle('close');
+      });
+    });
+  </script>
 </div>

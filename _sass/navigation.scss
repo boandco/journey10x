@@ -10,6 +10,65 @@
   align-items: center;
   transition: 0.4s ease;
 
+  @media screen and (max-width: $break-mobile) {
+    width: 100%;
+    padding: $gutter / 2;
+    margin: 0;
+    a.logo {
+      position: relative;
+      z-index: 101;
+      svg path {
+        transition: 0.4s ease;
+      }
+    }
+    button {
+      z-index: 101;
+      margin-bottom: 6apx;
+    }
+    &.menu_opened {
+      a.logo svg path {
+        fill: $color-white;
+      }
+    }
+  }
+
+  .btn.menu_trigger {
+    width: 35px;
+    height: 15px;
+    background: transparent;
+    position: relative;
+    &::before, &::after {
+      content: '';
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      background: $color-black;
+      left: 0;
+      transition: 0.4s ease;
+      transform: rotate(0);
+      transform-origin: center bottom;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    &.close {
+      &::before, &::after {
+        background: $color-white;
+        top: 0;
+        bottom: unset;
+      }
+      &::before {
+        transform: rotate(-45deg);
+      }
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
   &__items {
     display: flex;
     gap: 4em;
@@ -20,6 +79,41 @@
       text-transform: uppercase;
       color: $color-black;
       font-weight: 600;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: $color-black;
+      height: 100vh;
+      width: 100vw;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 100;
+      transform: translateX(100%);
+      transition: 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+      gap: 2em;
+      a {
+        color: $color-white;
+        font-size: clamp(2em, 10vw, 5em);
+        transition: 0.4s ease;
+        transition-delay: var(--transition-delay);
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      .menu_close {
+        position: absolute;
+        top: 2em;
+        right: 2em;
+      }
+      &.active {
+        transform: translateX(0);
+        a {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
     }
   }
 
@@ -33,6 +127,19 @@
     }
     a {
       color: $color-white;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+      margin: 0;
+      mix-blend-mode: normal;
+      background: $color-black;
+      border-bottom: 1px solid rgba($color-white, 0.1);
+      padding: 1em ($gutter / 2);
+      .btn.menu_trigger {
+        &::before, &::after {
+          background: $color-white;
+        }
+      }
     }
   }
 }

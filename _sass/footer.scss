@@ -5,11 +5,22 @@
   padding: $gutter;
   z-index: -1;
 
+  @media screen and (max-width: $break-mobile) {
+    padding: $gutter / 2;
+  }
+
   .sitemap {
     display: grid;
     grid-template-columns: 50% 1fr 1fr;
     padding: $gutter 0;
     text-transform: uppercase;
+
+    @media screen and (max-width: $break-mobile) {
+      padding: ($gutter / 2) 0;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 2em;
+    }
 
     &__links {
       list-style: none;

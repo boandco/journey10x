@@ -17,6 +17,10 @@
     position: absolute;
     top: 1em;
     right: 1em;
+    @media screen and (max-width: $break-mobile) {
+      height: 50px;
+      width: 50px;
+    }
   }
 
   video {
@@ -213,7 +217,35 @@
           }
         }
       }
-
+    }
+    @media screen and (max-width: $break-mobile) {
+      flex-direction: column;
+      &__project {
+        width: 100%;
+        height: auto;
+        padding: 1em;
+        cursor: default;
+        .thumbnail {
+          position: relative;
+          height: 350px;
+          top: unset;
+          left: unset;
+          img,button {
+            opacity: 1;
+          }
+          button {
+            pointer-events: all !important;
+            height: 80px;
+            width: 80px;
+          }
+        }
+        .information {
+          opacity: 1 !important;
+          p span {
+            transform: translateY(0) !important;
+          }
+        }
+      }
     }
   }
 }
