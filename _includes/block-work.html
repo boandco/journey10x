@@ -62,7 +62,7 @@
         let player_source = document.getElementById('video_modal_source');
         player.setAttribute('poster', proj.getAttribute('data-poster'));
         player_source.setAttribute('src', proj.getAttribute('data-source'));
-        player_source.setAttribute('type', 'video/webm');
+        player_source.setAttribute('type', 'video/mp4');
         player.load();
         modal.classList.add('active');
         player.play();
