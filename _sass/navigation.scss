@@ -25,6 +25,7 @@
 
   &.dark {
     mix-blend-mode: difference;
+    margin: ($gutter / 2) $gutter;
     .logo {
       svg path {
         fill: $color-white;

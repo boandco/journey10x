@@ -32,8 +32,6 @@
       } else if (obj.includes('animate-in')) {
         let ref = obj.split('+');
         document.getElementById(ref[1]).classList.add('animated');
-      } else if (obj.includes('changenav')) {
-        document.getElementById('navigation').classList.add('dark');
       }
     });
     if (document.querySelector('.rotate_on_scroll')) {
@@ -43,6 +41,18 @@
         document.querySelector('.rotate_on_scroll').style.transform = `rotate(${ rotation }deg)`;
       });
     }
+    let windowOffset = 120;
+    scroll.on('scroll', ({ scroll }) => {
+      if (scroll.y >= (window.innerHeight - windowOffset)) {
+        if (!document.getElementById('navigation').classList.contains('dark')) {
+          document.getElementById('navigation').classList.add('dark');
+        }
+      } else if (scroll.y < (window.innerHeight - windowOffset)) {
+        if (document.getElementById('navigation').classList.contains('dark')) {
+          document.getElementById('navigation').classList.remove('dark');
+        }
+      }
+    })
     document.querySelectorAll('a.local').forEach((el) => {
       el.addEventListener('click', (ev) => {
         scroll.scrollTo(el.getAttribute('href'));
