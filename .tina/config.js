@@ -23,6 +23,7 @@ export default defineConfig({
         label: "Projects",
         name: "projects",
         path: "_projects",
+        format: "md",
         fields: [
           {
             type: "rich-text",
