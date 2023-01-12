@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/boandco/journey10x/issues"
   },
-  "homepage": "https://github.com/boandco/journey10x#readme"
+  "homepage": "https://github.com/boandco/journey10x#readme",
+  "dependencies": {
+    "@tinacms/cli": "^1.0.6",
+    "tinacms": "^1.1.3"
+  }
 }
