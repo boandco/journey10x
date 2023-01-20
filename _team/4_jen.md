@@ -1,7 +1,7 @@
 ---
   name: Jennifer Hancock
   role: Head of Production
-  order: 5
+  order: 4
 ---
 Jennifer is an award winning producer who’s 14 year career in the entertainment industry began in Broadcast Television in North Carolina after receiving a Bachelor of Fine Arts degree from the Savannah College of Art and Design.  
 

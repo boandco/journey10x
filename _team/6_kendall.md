@@ -1,7 +1,7 @@
 ---
   name: Kendall Kiesewetter
   role: Director of Post-Production
-  order: 7
+  order: 6
 ---
 Kendall has spent the past 10 years working with ad agencies, start-ups, and production companies, creating content for a variety of global brands and networks. Her interest in filmmaking began at a young age, when she asked her parents to buy her a camcorder so she could create what she saw on TV. From that point on, she knew her calling was creating content. 
 

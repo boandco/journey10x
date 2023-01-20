@@ -1,7 +1,7 @@
 ---
   name: Brandon Nickens
   role: Director of Casting and Talent
-  order: 6
+  order: 5
 ---
 Brandon is seasoned expert with over 20 years of production and casting experience within entertainment, sports, and media. Brandon is a passionate storyteller with a unique ability to identify, coach, and cultivate diverse talent for both traditional and digital media formats.   
 
