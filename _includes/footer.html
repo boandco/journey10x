@@ -12,18 +12,25 @@
         {% endfor %}
       </ul>
       <div class="sitemap__contact">
-        <p>{{ site.data.footer.contact.phone_number }}</p>
-        <p>{{ site.data.footer.contact.email }}</p>
-        <ul class="sitemap__contact__socials">
-          {% for network in site.data.footer.contact.social_media %}
-            <li>
-              <a class="btn btn__circle btn__grey small" href="{{ network.url }}" target="_blank">
-                {% include assets/icon-{{ network.social_network | downcase }}.html %}
-                <span class="visually-hidden">{{ network.social_network }}</span>
-              </a>
-            </li>
+        <div class="address">
+          <p class="muted">{{ site.title }}</p>
+          {% for line in site.data.footer.contact.address %}
+            <p class="muted line">{{ line.title }}</p>
           {% endfor %}
-        </ul>
+        </div>
+        <p>{{ site.data.footer.contact.email }}</p>
+        {% if site.data.footer.contact.show_social_media %}
+          <ul class="sitemap__contact__socials">
+            {% for network in site.data.footer.contact.social_media %}
+              <li>
+                <a class="btn btn__circle btn__grey small" href="{{ network.url }}" target="_blank">
+                  {% include assets/icon-{{ network.social_network | downcase }}.html %}
+                  <span class="visually-hidden">{{ network.social_network }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
       </div>
     </div>
     <div class="copyright">

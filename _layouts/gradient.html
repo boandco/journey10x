@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <canvas id="gradient" class="gradient background"></canvas>
+    <script src="/assets/js/Gradient.js" type="text/javascript"></script>
+    <script>
+      var hero_gradient = new Gradient()
+      hero_gradient.initGradient('#gradient');
+    </script>
+  </body>
+</html>

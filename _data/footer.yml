@@ -1,7 +1,12 @@
 ---
 contact:
+  address:
+  - title: 1024 Harding Ave.
+  - title: Suite 201
+  - title: Venice CA 90291
   phone_number: 888-373-8888
   email: 10x@journey10x.com
+  show_social_media: false
   social_media:
   - url: https://instagram.com
     social_network: Instagram

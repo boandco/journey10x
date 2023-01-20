@@ -1,27 +1,18 @@
 .section#contact {
   color: $color-black;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 4em;
+  padding: inherit 10%;
   h2 {
-    max-width: 40%;
     margin: 0;
   }
   p {
-    font-size: 1.4em;
-    margin: 0;
+    font-size: clamp(1.4em, 2vw, 2em);
+    max-width: 70%;
     font-weight: 300;
     a {
       font-weight: 500;
     }
-  }
-  @media screen and (max-width: $break-mobile) {
-    gap: 1em;
-    flex-direction: column;
-    align-items: flex-start;
-    h2 {
-      max-width: 100%;
+    &:last-of-type {
+      margin-top: 3em;
     }
   }
 }

@@ -1,10 +1,10 @@
 ---
 page_sections:
 - template: block-hero
-  headline: An agency that empowers, uplifts, enlightens
+  headline: An agency that empowers, uplifts, inspires
 - template: block-about-us
   section_title: About us
-  heading: we help brands empower, inspire and uplift, through content, events, brand development, and social media messaging, using the power of storytelling, celebrities, and innovative campaigns that rise above the noise
+  heading: journey 10x helps brands empower, uplift and inspire, through content, events, brand development, and social media messaging, using the power of storytelling, celebrities, and innovative campaigns that rise above the noise
   description: Journey 10X aligns brands with their core values by weaving together content, events, pop culture and messaging that empowers, uplifts and/or enlightens
 - template: block-clients
   client_logos:
@@ -24,7 +24,7 @@ page_sections:
   - "/assets/images/logos/fim45-logo.png"
 - template: block-work
   section_title: Work
-  description: Journey 10 X is a coalition of bright minds, who have each been trailblazers in their own right, throughout the media world. All the members of 10X have one shared common goal - to make the world better by telling stories that enlighten, empower and/or uplift.
+  description: Journey 10 X is a coalition of bright minds throughout the media world, each of whom are trailblazers in their own right. All the members of 10X have one shared common goal - to make the world better by telling stories that enlighten, empower and/or uplift.
 - template: block-values
   section_title: 10x
   values:
@@ -68,5 +68,6 @@ page_sections:
     name: Sydney
 - template: block-contact
   section_title: Contact us
-  heading: connect with us today...
+  heading: we connect brands with...
+  description: extraordinary humans, whose unheard stories need to be told. If you have a story that can help empower, uplift, or inspire others, we want to hear from you.
   email: 10x@journey10x.com

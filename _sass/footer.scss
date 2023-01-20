@@ -5,6 +5,10 @@
   padding: $gutter;
   z-index: -1;
 
+  p.muted {
+    color: #767676;
+  }
+
   @media screen and (max-width: $break-mobile) {
     padding: $gutter / 2;
   }
@@ -25,6 +29,7 @@
     &__links {
       list-style: none;
       padding: 0;
+      margin: 0;
       li {
         margin: 1em 0;
         a {
@@ -36,6 +41,15 @@
       }
     }
     &__contact {
+      .address {
+        margin: 1em 0 3em;
+        p {
+          margin: 0.2em 0;
+          &.line {
+            text-transform: capitalize;
+          }
+        }
+      }
       &__socials {
         list-style: none;
         padding: 0;
