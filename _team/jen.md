@@ -1,5 +1,5 @@
 ---
-  name: Jen Hancock
+  name: Jennifer Hancock
   role: Head of Production
   order: 5
 ---

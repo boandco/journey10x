@@ -1,5 +1,5 @@
 ---
-  name: Eric Donaldson
+  name: Eric Alan Donaldson
   role: Co-founder
   order: 2
 ---

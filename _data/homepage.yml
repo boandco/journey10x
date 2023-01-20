@@ -4,8 +4,7 @@ page_sections:
   headline: An agency that empowers, uplifts, inspires
 - template: block-about-us
   section_title: About us
-  heading: journey 10x helps brands empower, uplift and inspire, through content, events, brand development, and social media messaging, using the power of storytelling, celebrities, and innovative campaigns that rise above the noise
-  description: Journey 10X aligns brands with their core values by weaving together content, events, pop culture and messaging that empowers, uplifts and/or enlightens
+  heading: journey 10x helps brands empower, uplift and inspire, through content, events, brand development, and social media, using the power of storytelling, celebrities, and innovative campaigns that rise above the noise
 - template: block-clients
   client_logos:
   - "/assets/images/logos/wwe-logo.png"
@@ -15,37 +14,35 @@ page_sections:
   - "/assets/images/logos/heros-journey-logo.png"
   - "/assets/images/logos/fox-sports-logo.png"
   - "/assets/images/logos/journey-8-logo.png"
-  - "/assets/images/logos/souce-media-fpo-logo.png"
   - "/assets/images/logos/bkfc-logo.png"
-  - "/assets/images/logos/ahhaa-logo.png"
   - "/assets/images/logos/boys-girls-club-logo.png"
-  - "/assets/images/logos/aspire-logo-fpo.png"
   - "/assets/images/logos/wme-logo.png"
   - "/assets/images/logos/fim45-logo.png"
 - template: block-work
   section_title: Work
-  description: Journey 10 X is a coalition of bright minds throughout the media world, each of whom are trailblazers in their own right. All the members of 10X have one shared common goal - to make the world better by telling stories that enlighten, empower and/or uplift.
+  description: Journey 10 X is a coalition of bright minds throughout the media world, each of whom are trailblazers in their own right. All the members of 10X have one shared common goal - to make the world better by telling stories that empower, uplift, and inspire.
 - template: block-values
   section_title: 10x
   values:
   - title: goals
   - title: reach
   - title: engagement
+  - title: results
   - title: sales
   - title: growth
 - template: block-services
   section_title: Our services
   services:
   - title: Brand Development
-    description: We can help you make innovative brand campaigns that rise above the noise and empower, uplift and/or enlighten the world.
+    description: Innovative brand campaigns that impact your organization and your audience.
   - title: Production
-    description: We are a full scale production house, soup to nuts, from seed to distribution.
+    description: Full scale production and post delivery from seed to distribution.
   - title: Social Media Marketing
-    description: We know how to make social media rise above the noise.
+    description: Relevant social media campaigns that inspire curiosity, challenge normal, open hearts & grow minds.
   - title: Management
-    description: We manage talent that cares about making the world better.
+    description: Managing talent who care about making the world a better place.
   - title: Events
-    description: We produce full scale events that empower, enlighten and/or uplift the world.
+    description: Event production that delivers an immersive experience in person & around the globe.
 - template: block-team
   section_title: Team
   heading: our team is dedicated...
