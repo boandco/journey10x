@@ -3,6 +3,7 @@
 <script nomodule src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll" crossorigin="anonymous"></script>
 <script src="/assets/js/landing.min.js"></script>
 <script>
+  var is_updating = false;
   document.querySelectorAll('.letter-animate').forEach(function(e) {
     e.innerHTML = e.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
   });
@@ -19,19 +20,21 @@
       getSpeed: true
     });
     scroll.on('call', (obj) => {
-      if (obj.includes('text-animate')) {
-        let ref = obj.split('+');
-        anime.timeline({loop: false}).add({
-            targets: `#${ref[1]} .letter`,
-            translateY: [100,0],
-            opacity: [0, 1],
-            easing: "easeOutExpo",
-            duration: 1400,
-            delay: (el, i) => 30 * i
-        });
-      } else if (obj.includes('animate-in')) {
-        let ref = obj.split('+');
-        document.getElementById(ref[1]).classList.add('animated');
+      if (!is_updating) {
+        if (obj.includes('text-animate')) {
+          let ref = obj.split('+');
+          anime.timeline({loop: false}).add({
+              targets: `#${ref[1]} .letter`,
+              translateY: [100,0],
+              opacity: [0, 1],
+              easing: "easeOutExpo",
+              duration: 1400,
+              delay: (el, i) => 30 * i
+          });
+        } else if (obj.includes('animate-in')) {
+          let ref = obj.split('+');
+          document.getElementById(ref[1]).classList.add('animated');
+        }
       }
     });
     if (document.querySelector('.rotate_on_scroll')) {
@@ -59,5 +62,19 @@
         ev.preventDefault();
       });
     });
+    
+    if (document.querySelector('.accordion_trigger')) {
+      document.querySelectorAll('.accordion_trigger').forEach((x) => {
+        x.addEventListener('click', () => {
+          is_updating = true;
+          setTimeout(() => {
+            scroll.update();
+            setTimeout(() => {
+              is_updating = false;
+            }, 10)
+          }, 600)
+        })
+      });
+    }
   }
 </script>
