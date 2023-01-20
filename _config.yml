@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   journey 10x helps brands empower, uplift and inspire, through content, events, brand development, and social media, using the power of storytelling, celebrities, and innovative campaigns that rise above the noise
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://journey10x.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
