@@ -29,8 +29,10 @@ $break-mobile: '1024px';
   }
 }
 
-.wrapper[data-scroll-container] {
-  width: 100vw;
+[data-scroll-container] {
+  perspective: 1px;
+}
+[data-scroll-section] {
   perspective: 1px;
 }
 .visually-hidden {
@@ -56,8 +58,11 @@ html.has-scroll-smooth {
   right: 0;
   top: 0;
   bottom: 0;  
+  backface-visibility: hidden;
+	transform: translateZ(0);
 }
 body {
+  height: 100vh;
   margin: 0;
   padding: 0;
   background: $color-black;
