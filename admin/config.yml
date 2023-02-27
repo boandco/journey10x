@@ -39,7 +39,7 @@ collections:
             name: "client_logos"
             widget: "list"
             allow_add: true
-            label_singular: 'Client'
+            label_singular: "Client"
             fields:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Logo", name: "image", choose_url: false, widget: "image"}
@@ -49,7 +49,56 @@ collections:
         fields:
           - {label: "Template", name: "template", widget: "hidden"}
           - {label: "Section Title", name: "section_title", widget: "string"}
+          - {label: "Description", name: "description",  hint: "To edit projects navigate to the [Projects](/admin/#/collections/projects) tab.", widget: "text"}
+      - label: "Values"
+        name: "block-values"
+        file: "_data/blocks/block-values.yml"
+        fields:
+          - {label: "Template", name: "template", widget: "hidden"}
+          - {label: "Section Title", name: "section_title", widget: "string"}
+          - label: "Values"
+            name: "values" 
+            widget: "list"
+            label_singular: "Value"
+            collapsed: true
+            add_to_top: true
+            summary: '{{fields.title.title}}'
+            field: {label: "Value", name: "title", widget: "string"}
+      - label: "Services"
+        name: "block-services"
+        file: "_data/blocks/block-services.yml"
+        fields:
+          - {label: "Template", name: "template", widget: "hidden"}
+          - {label: "Section Title", name: "section_title", widget: "string"}
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            label_singular: "Service"
+            collapsed: true
+            add_to_top: true
+            summary: '{{fields.title}} - {{fields.description}}'
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+      - label: "Team"
+        name: "block-team"
+        file: "_data/blocks/block-team.yml"
+        fields:
+          - {label: "Template", name: "template", widget: "hidden"}
+          - {label: "Section Title", name: "section_title", widget: "string"}
+          - {label: "Heading", name: "heading", widget: "string"}
           - {label: "Description", name: "description", widget: "text"}
+          - label: "Team Members"
+            name: "members"
+            widget: "list"
+            label_singular: "Team member"
+            collapsed: true
+            add_to_top: true
+            summary: '{{fields.name}} - {{fields.role}}'
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Role", name: "role", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
 
   - label: "Projects"
     name: "projects"
