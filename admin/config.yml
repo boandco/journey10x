@@ -1,19 +1,27 @@
 backend:
-  name: git-gateway
+  name: test-repo # Use test-repo for local, git-gateway for production
   branch: main # Branch to update (optional; defaults to master)
+
 media_folder: "assets/images/uploads"
 public_folder: "assets/images/uploads"
+
+#Config
+site_url: https://journey10x.com
+display_url: https://journey10x.com
+logo_url: https://boandco.studio/images/netlify-logo.png
+
 collections:
   - name: "projects"
     label: "Projects"
     folder: "_projects"
     create: true
     slug: "{{slug}}"
+    editor:
+      preview: false
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
       - {label: "Display on homepage", name: "display_on_homepage", widget: "boolean", default: true}
-      - {label: "Media Type", name: "media", widget: "string"}
+      - {label: "Media Type (Social Media, TV/Streaming)", name: "media", widget: "string"}
       - {label: "Credit Name", name: "credit_name", widget: "string"}
       - {label: "Credit Role", name: "credit_title", widget: "string"}
       - {label: "Thumbnail", name: "image", widget: "image", choose_url: true}
