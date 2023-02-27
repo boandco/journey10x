@@ -1,11 +1,13 @@
 ---
-page_sections:
-- template: block-hero
+hero:
+  template: block-hero
   headline: An agency that empowers, uplifts, inspires
-- template: block-about-us
+about_us:
+  template: block-about-us
   section_title: About us
   heading: journey 10x helps brands empower, uplift and inspire, through content, events, brand development, and social media, using the power of storytelling, celebrities, and innovative campaigns that rise above the noise
-- template: block-clients
+clients:
+  template: block-clients
   client_logos:
   - "/assets/images/logos/wwe-logo.png"
   - "/assets/images/logos/un-foundation.png"
@@ -18,10 +20,12 @@ page_sections:
   - "/assets/images/logos/boys-girls-club-logo.png"
   - "/assets/images/logos/wme-logo.png"
   - "/assets/images/logos/fim45-logo.png"
-- template: block-work
+work:
+  template: block-work
   section_title: Work
   description: Journey 10 X is a coalition of bright minds throughout the media world, each of whom are trailblazers in their own right. All the members of 10X have one shared common goal - to make the world better by telling stories that empower, uplift, and inspire.
-- template: block-values
+values:
+  template: block-values
   section_title: 10x
   values:
   - title: goals
@@ -30,7 +34,8 @@ page_sections:
   - title: results
   - title: sales
   - title: growth
-- template: block-services
+services:
+  template: block-services
   section_title: Our services
   services:
   - title: Brand Development
@@ -43,13 +48,16 @@ page_sections:
     description: Managing talent who care about making the world a better place.
   - title: Events
     description: Event production that delivers an immersive experience in person & around the globe.
-- template: block-team
+team:
+  template: block-team
   section_title: Team
   heading: our team is dedicated...
   description: to making empowerment content.
-- template: block-divider
+divider:
+  template: block-divider
   section_title: we're an international empowerment agency with global reach
-- template: block-locations
+locations:
+  template: block-locations
   location_list:
   - airport_code: LAX
     name: Los Angeles
@@ -63,7 +71,8 @@ page_sections:
     name: Ottawa
   - airport_code: SYD
     name: Sydney
-- template: block-contact
+contact:
+  template: block-contact
   section_title: Contact us
   heading: we connect brands with...
   description: extraordinary humans, whose unheard stories need to be told. If you have a story that can help empower, uplift, or inspire others, we want to hear from you.

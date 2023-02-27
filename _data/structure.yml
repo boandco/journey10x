@@ -1,0 +1,12 @@
+---
+page_sections:
+  - template: block-hero
+  - template: block-about-us
+  - template: block-clients
+  - template: block-work
+  - template: block-values
+  - template: block-services
+  - template: block-team
+  - template: block-divider
+  - template: block-locations
+  - template: block-contact

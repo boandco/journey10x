@@ -2,7 +2,6 @@
 layout: default
 ---
 
-{% for block in site.data.homepage.page_sections %}
-  {% assign index = forloop.index | minus: 1 %}
-  {% include {{block.template}}.html index=index %}
+{% for block in site.data.structure.page_sections %}
+  {% include {{block.template}}.html %}
 {% endfor %}
