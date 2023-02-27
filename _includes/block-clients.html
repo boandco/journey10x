@@ -1,13 +1,13 @@
-{% assign section = site.data.homepage.clients %}
+{% assign section = site.data.blocks.block-clients %}
 <section id="clients" class="section" data-scroll-section>
   <div class="logo_soup" data-scroll data-scroll-direction="horizontal" data-scroll-speed="3">
-    {% for logo in section.client_logos %}
-      <img id="{{ logo | slugify }}-1" data-scroll src="{{ logo }}">
+    {% for client in section.client_logos %}
+      <img id="{{ client.name | slugify }}-1" data-scroll src="{{ client.image }}">
     {% endfor %}
   </div>
   <div class="logo_soup" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3">
-    {% for logo in section.client_logos %}
-      <img id="{{ logo | slugify }}-2" data-scroll src="{{ logo }}">
+    {% for client in section.client_logos %}
+      <img id="{{ client.name | slugify }}-2" data-scroll src="{{ client.image }}">
     {% endfor %}
   </div>
   <video class="background" id="clients_video" autoplay loop muted playsinline nocontrols preload="auto">

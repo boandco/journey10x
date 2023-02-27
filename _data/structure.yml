@@ -1,12 +1,22 @@
 ---
 page_sections:
   - template: block-hero
+    label: Hero
   - template: block-about-us
+    label: About us
   - template: block-clients
+    label: Clients
   - template: block-work
+    label: Work
   - template: block-values
+    label: Values
   - template: block-services
+    label: Services
   - template: block-team
+    label: Team
   - template: block-divider
+    label: Divider
   - template: block-locations
+    label: Locations
   - template: block-contact
+    label: Contact

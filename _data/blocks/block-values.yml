@@ -1,0 +1,10 @@
+---
+template: block-values
+section_title: 10x
+values:
+  - title: goals
+  - title: reach
+  - title: engagement
+  - title: results
+  - title: sales
+  - title: growth

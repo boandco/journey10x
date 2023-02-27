@@ -1,12 +1,12 @@
 ---
 main:
-- title: Home
-  url: '#home'
-- title: About
-  url: '#about'
-- title: Work
-  url: '#work'
-- title: Team
-  url: '#team'
-- title: Contact
-  url: '#contact'
+  - title: Home
+    url: '#home'
+  - title: About
+    url: '#about'
+  - title: Work
+    url: '#work'
+  - title: Team
+    url: '#team'
+  - title: Contact
+    url: '#contact'

@@ -1,6 +1,7 @@
 backend:
   name: git-gateway # Use test-repo for local, git-gateway for production
   branch: main # Branch to update (optional; defaults to master)
+  # local_backend: true
 
 media_folder: "assets/images/uploads"
 public_folder: "assets/images/uploads"
@@ -11,8 +12,40 @@ display_url: https://journey10x.com
 logo_url: https://boandco.studio/images/netlify-logo.png
 
 collections:
-  - name: "projects"
-    label: "Projects"
+  - label: "Homepage"
+    name: "homepage_collection"
+    editor:
+      preview: false
+    files:
+      - label: "Hero"
+        name: "block-hero"
+        file: "_data/blocks/block-hero.yml"
+        fields:
+          - {label: "Template", name: "template", widget: "hidden"}
+          - {label: "Headline", name: "headline", widget: "string"}
+      - label: "About us"
+        name: "block-about-us"
+        file: "_data/blocks/block-about-us.yml"
+        fields:
+          - {label: "Template", name: "template", widget: "hidden"}
+          - {label: "Section Title", name: "section_title", widget: "string"}
+          - {label: "Heading", name: "heading", widget: "string"}
+      - label: "Clients"
+        name: "block-clients"
+        file: "_data/blocks/block-clients.yml"
+        fields:
+          - {label: "Template", name: "template", widget: "hidden"}
+          - label: "Clients"
+            name: "client_logos"
+            widget: "list"
+            allow_add: true
+            label_singular: 'Client'
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Logo", name: "image", choose_url: false, widget: "image"}
+
+  - label: "Projects"
+    name: "projects"
     folder: "_projects"
     create: true
     slug: "{{slug}}"
