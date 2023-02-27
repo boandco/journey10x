@@ -22,14 +22,14 @@ collections:
         file: "_data/blocks/block-hero.yml"
         fields:
           - {label: "Template", name: "template", widget: "hidden"}
-          - {label: "Headline", name: "headline", widget: "string"}
+          - {label: "Headline", name: "headline", widget: "text"}
       - label: "About us"
         name: "block-about-us"
         file: "_data/blocks/block-about-us.yml"
         fields:
           - {label: "Template", name: "template", widget: "hidden"}
           - {label: "Section Title", name: "section_title", widget: "string"}
-          - {label: "Heading", name: "heading", widget: "string"}
+          - {label: "Heading", name: "heading", widget: "text"}
       - label: "Clients"
         name: "block-clients"
         file: "_data/blocks/block-clients.yml"
@@ -43,6 +43,13 @@ collections:
             fields:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Logo", name: "image", choose_url: false, widget: "image"}
+      - label: "Work"
+        name: "block-work"
+        file: "_data/blocks/block-work.yml"
+        fields:
+          - {label: "Template", name: "template", widget: "hidden"}
+          - {label: "Section Title", name: "section_title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
 
   - label: "Projects"
     name: "projects"
