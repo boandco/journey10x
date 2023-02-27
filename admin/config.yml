@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+media_folder: "assets/images/uploads"
+public_folder: "assets/images/uploads"
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "_projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Display on homepage", name: "display_on_homepage", widget: "boolean", default: true}
+      - {label: "Media Type", name: "media", widget: "string"}
+      - {label: "Credit Name", name: "credit_name", widget: "string"}
+      - {label: "Credit Role", name: "credit_title", widget: "string"}
+      - {label: "Thumbnail", name: "image", widget: "image", choose_url: true}
+      - {label: "Project Video", name: "source", widget: "file"}
