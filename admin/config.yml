@@ -11,6 +11,7 @@ site_url: https://journey10x.com
 display_url: https://journey10x.com
 logo_url: https://boandco.studio/images/logo.svg
 
+#Content
 collections:
   - label: "Homepage"
     name: "homepage_collection"
