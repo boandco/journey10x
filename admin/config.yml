@@ -131,11 +131,12 @@ collections:
           - {label: "Heading", name: "heading", widget: "string"}
           - {label: "Description", name: "description", widget: "text"}
           - {label: "Email", name: "email", widget: "string"}
-  - label: "Projects"
+  - label: "Work"
     name: "projects"
     folder: "_projects"
     create: true
     slug: "{{slug}}"
+    label_singular: "Project"
     editor:
       preview: false
     fields:

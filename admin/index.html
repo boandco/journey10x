@@ -81,6 +81,15 @@
       border-color: #1145FF transparent transparent;
     }
     /* Navigation */
+    .css-npvq26-SidebarHeading {
+      display: none;
+    }
+    .css-6fxb8u-SearchContainer {
+      margin: 12px 12px 0;
+    }
+    .css-1blbyw7-SearchInput:focus {
+      box-shadow: 0px 0px 0px 2px inset #1145FF;
+    }
     .css-y7r3-AppHeader {
       box-shadow: none;
       border-bottom: 1px solid #dadada;
@@ -89,9 +98,11 @@
       box-shadow: none;
       background-color: transparent;
       padding: 0;
+      width: unset;
     }
     .css-12b66la-AppHeaderContent {
       position: relative;
+      max-width: unset;
     }
     .css-12b66la-AppHeaderContent nav {
       padding-left: 100px;
@@ -214,15 +225,69 @@
       background-color: #f6f6f6;
       border: 2px solid rgb(223, 223, 227);
     }
+    .css-5wgw3f-ListCard-card {
+      width: 100%;
+    }
+    .css-pyxbz6-CollectionContainer {
+      display: flex;
+      min-height: 100%;
+    }
+    .css-1gj57a0-SidebarContainer-card {
+      box-shadow: none;
+      border-radius: 0;
+      border-right: 1px solid #dadada;
+      z-index: 98;
+      position: sticky;
+      max-height: unset;
+      height: calc(100vh - 56px);
+      top: 56px;
+      left: 0;
+    }
+    .css-1f7nhiq-CollectionMain {
+      padding-left: 0;
+      max-width: 840px;
+      width: 100%;
+      padding: 0 2em;
+      margin: 2em auto;
+    }
+    .css-v758ki-AppMainContainer {
+      max-width: unset;
+    }
+    .css-pyxbz6-CollectionContainer {
+      margin: 0;
+    }
+    .css-p5sjac-CollectionControlsContainer {
+      width: unset;
+    }
+    .css-1vitqlt-SearchResultContainer-card-cardTop {
+      max-width: unset;
+      width: 100%;
+      box-shadow: none;
+      border-radius: 0;
+      background-color: transparent;
+      padding: 0;
+    }
 
   </style>
   <!-- Mobile overrides -->
   <style type="text/css">
     @media (max-width: 799px) {
       aside.css-1gj57a0-SidebarContainer-card.el9l68m0 {
-        position: static;
+        position: relative;
         width: 100%;
-        margin-bottom: 30px;
+        height: fit-content;
+        top: unset;
+        left: 0;
+        border: 1px solid #dadada;
+        margin: 0;
+        border-radius: 4px;
+      }
+      .css-npvq26-SidebarHeading {
+        margin-top: 0;
+      }
+      .css-pyxbz6-CollectionContainer {
+        flex-direction: column;
+        padding: 1em;
       }
 
       .css-v758ki-AppMainContainer, .css-12b66la-AppHeaderContent {
@@ -235,7 +300,7 @@
       }
 
       .css-1f7nhiq-CollectionMain {
-        padding-left: 0;
+        padding: 0;
       }
 
       .css-1hvrgvd-CollectionTopContainer-card-cardTop {
