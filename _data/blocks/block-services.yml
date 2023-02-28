@@ -1,10 +1,10 @@
 template: block-services
 section_title: Our services
 services:
-  - title: Production
-    description: Full scale production and post delivery from seed to distribution.
   - title: Brand Development
     description: Innovative brand campaigns that impact your organization and your audience.
+  - title: Production
+    description: Full scale production and post delivery from seed to distribution.
   - title: Social Media Marketing
     description: Relevant social media campaigns that inspire curiosity, challenge
       normal, open hearts & grow minds.
