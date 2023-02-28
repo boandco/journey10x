@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link rel="stylesheet" href="https://kit.fontawesome.com/25964935b5.css" crossorigin="anonymous">
 </head>
 <body>
   <!-- Messenger Chat Plugin Code -->
@@ -139,6 +140,7 @@
     }
     .css-u2webi-SidebarNavLink-sidebarNavLinkActive-SidebarNavLink {
       color: rgb(123, 130, 144);
+      border-left-width: 3px;
     }
     .css-u2webi-SidebarNavLink-sidebarNavLinkActive-SidebarNavLink:hover,
     .css-u2webi-SidebarNavLink-sidebarNavLinkActive-SidebarNavLink:active,
@@ -146,6 +148,11 @@
       color: #1145FF;
       background-color: #f3f6ff;
       border-left-color: #1145FF;
+    }
+    .nc-collectionPage-sidebarLink i {
+        font-size: 19px;
+        line-height: 24px;
+        margin-left: -1px;
     }
     .css-1vur7zs-FieldLabel-fieldLabel {
       background-color: #1145FF;
@@ -460,6 +467,30 @@
       .css-e9z4u8-AppHeaderSiteLink {
         display: none;
       }
+    }
+  </style>
+  <!-- Icon override -->
+  <style type="text/css">
+    aside a span {
+      display: inline-flex !important;
+      justify-content: center;
+      align-items: center
+    }
+    aside a span svg {
+      display: none !important;
+    }
+    aside a span::before {
+      font: var(--fa-font-solid);
+      font-size: 1rem;
+    }
+    aside a[href="#/collections/homepage_collection"] span::before {
+      content: "\f015";
+    }
+    aside a[href="#/collections/projects"] span::before {
+      content: "\e237";
+    }
+    aside a[href="#/collections/footer"] span::before {
+      content: "\f84d";
     }
   </style>
 </body>
