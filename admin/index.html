@@ -284,8 +284,26 @@
       border-radius: 0 0 6px 6px;
       overflow: hidden;
     }
+    .css-1t9i08i-ListCardLink {
+      position: relative;
+      transition: background-color 0.2s ease;
+    }
+    .css-1t9i08i-ListCardLink::after {
+      content: '\f044';
+      font: var(--fa-font-solid);
+      font-size: 1rem;
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
     .css-1t9i08i-ListCardLink:hover {
       background-color: #f3f3f3;
+    }
+    .css-1t9i08i-ListCardLink:hover::after {
+      opacity: 1;
     }
     .css-1fh4556-ViewControlsButton-button .css-tg1x8v-IconWrapper,
     .css-1jfbwn6-ViewControlsButton-button .css-tg1x8v-IconWrapper {
