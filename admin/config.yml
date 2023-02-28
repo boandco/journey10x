@@ -9,7 +9,7 @@ public_folder: "assets/images/uploads"
 #Config
 site_url: https://journey10x.com
 display_url: https://journey10x.com
-logo_url: https://boandco.studio/images/netlify-logo.png
+logo_url: https://boandco.studio/images/logo.svg
 
 collections:
   - label: "Homepage"
