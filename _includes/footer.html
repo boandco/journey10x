@@ -5,7 +5,7 @@
         {% include assets/text-logo.html %}
       </div>
       <ul class="sitemap__links">
-        {% for link in site.data.linklists.main %}
+        {% for link in site.data.linklists.footer.links %}
           <li>
             <a href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% else %}class="local"{% endif %}>{{ link.title }}</a>
           </li>
@@ -13,15 +13,14 @@
       </ul>
       <div class="sitemap__contact">
         <div class="address">
-          <p class="muted">{{ site.title }}</p>
           {% for line in site.data.footer.contact.address %}
             <p class="muted line">{{ line.title }}</p>
           {% endfor %}
         </div>
         <p>{{ site.data.footer.contact.email }}</p>
-        {% if site.data.footer.contact.show_social_media %}
+        {% if site.data.footer.socials.show_social_media %}
           <ul class="sitemap__contact__socials">
-            {% for network in site.data.footer.contact.social_media %}
+            {% for network in site.data.footer.socials.social_media %}
               <li>
                 <a class="btn btn__circle btn__grey small" href="{{ network.url }}" target="_blank">
                   {% include assets/icon-{{ network.social_network | downcase }}.html %}

@@ -19,7 +19,7 @@
     </button>
   </div>
   <nav class="navigation__items">
-    {% for link in site.data.linklists.main %}
+    {% for link in site.data.linklists.main.links %}
       <a href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% else %}class="local menu_trigger"{% endif %} style="--transition-delay: 0.{{ forloop.index }}s">{{ link.title }}</a>
     {% endfor %}
   </nav>
