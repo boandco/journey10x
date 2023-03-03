@@ -51,7 +51,17 @@ collections:
         fields:
           - {label: "Template", name: "template", widget: "hidden"}
           - {label: "Section Title", name: "section_title", widget: "string"}
-          - {label: "Description", name: "description",  hint: "To edit projects navigate to the [Projects](/admin/#/collections/projects) tab.", widget: "text"}
+          - {label: "Description", name: "description",  widget: "text"}
+          - label: "Featured work"
+            name: "selected_work"
+            hint: "To edit projects navigate to the [Projects](/admin/#/collections/projects) tab."
+            widget: "relation"
+            collection: "projects"
+            search_fields: ["title"]
+            value_field: "title"
+            display_fields: ["title"]
+            multiple: true
+            max: 4
       - label: "Values"
         name: "block-values"
         file: "_data/blocks/block-values.yml"
