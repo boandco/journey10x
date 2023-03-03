@@ -512,28 +512,56 @@
     var state
 
     window.addEventListener('load', () => {
-      console.log('window loaded')
       var init = new MutationObserver(function(changes) {
-        console.log('body changed')
         if (document.querySelector('.css-v758ki-AppMainContainer') && document.querySelector('.css-e9z4u8-AppHeaderSiteLink')) {
-          console.log('App container & link & notif container exists')
           init.disconnect()
           swapLink()
 
           ApplicationListener.observe(document.querySelector('.css-v758ki-AppMainContainer'), {
-            childList: true
-          })
-          ApplicationListener.observe(document.querySelector('.notif__container'), {
-            subtree: true,
             childList: true,
-            attributes: true
+            subtree: false
+          })
+          imageUploadListener.observe(document.querySelector('.ReactModalPortal'), {
+            childList: true
           })
         }
       })
       var ApplicationListener = new MutationObserver(function(changes) {    
-        console.log('Application view changed')
         if (document.querySelector('.css-e9z4u8-AppHeaderSiteLink')) {
           swapLink()
+        }
+        if (document.querySelector('.evqrzhe6')) {
+          deleteItemListener.observe(document.querySelector('.evqrzhe6'), {
+            childList: true,
+            subtree: true
+          })
+        } else {
+          deleteItemListener.disconnect()
+          setTimeout(() => {
+            if (!checkBuildStatusInterval_running) {
+              swapLink()
+            }
+          }, 1800)
+        }
+      })
+      var imageUploadListener = new MutationObserver(function(changes) {
+        if (document.querySelector('.e11970yf0')) {
+          imageListListener.observe(document.querySelector('.e11970yf0'), {
+            childList: true,
+            subtree: true
+          })
+        } else {
+          imageListListener.disconnect()
+        }
+      })
+      var imageListListener = new MutationObserver(function(changes) {
+        if (document.querySelector('.css-e9z4u8-AppHeaderSiteLink')) {
+          setTimeout(swapLink, 1800)
+        }
+      })
+      var deleteItemListener = new MutationObserver(function(changes) {
+        if (document.querySelector('.css-e9z4u8-AppHeaderSiteLink')) {
+          setTimeout(swapLink, 1800)
         }
       })
     
