@@ -27,6 +27,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://journey10x.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+netlify_id: ad211fd0-4814-4996-91b0-39fdc4d08718
 
 # Build settings
 
