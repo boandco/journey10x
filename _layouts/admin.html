@@ -555,7 +555,7 @@
         }
       })
       var ApplicationListener = new MutationObserver(function(changes) {    
-        if (document.querySelector('.css-e9z4u8-AppHeaderSiteLink')) {
+        if (document.querySelector('.css-e9z4u8-AppHeaderSiteLink') && !checkBuildStatusInterval_running) {
           swapLink()
         }
         if (document.querySelector('.evqrzhe6')) {
