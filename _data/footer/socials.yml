@@ -2,7 +2,7 @@ show_social_media: false
 social_media:
   - url: https://instagram.com/journey10x
     social_network: Instagram
-  - url: https://facebook.com
+  - url: https://facebook.com/journey10x
     social_network: Facebook
   - url: https://youtube.com
     social_network: YouTube
