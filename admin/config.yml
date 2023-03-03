@@ -151,7 +151,6 @@ collections:
       preview: false
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Display on homepage", name: "display_on_homepage", widget: "boolean", default: true}
       - {label: "Media Type (Social Media, TV/Streaming)", name: "media", widget: "string"}
       - {label: "Credit Name", name: "credit_name", widget: "string"}
       - {label: "Credit Role", name: "credit_title", widget: "string"}

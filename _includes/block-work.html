@@ -1,35 +1,34 @@
-{% assign project = site.data.blocks.block-work %}
+{% assign section = site.data.blocks.block-work %}
 <div id="work" class="section" data-scroll-section>
   <div class="section__title">
-    <h2 class="letter-animate" id="{{ project.template }}-h2" data-scroll data-scroll-call="text-animate+{{ project.template }}-h2">{{ project.section_title }}</h2>
+    <h2 class="letter-animate" id="{{ section.template }}-h2" data-scroll data-scroll-call="text-animate+{{ section.template }}-h2">{{ section.section_title }}</h2>
   </div>
   <div class="work__projects">
-    {% assign projects = site.projects | sort: 'order' %}
-    {% for project in projects limit: 3 %}
-      {% if project.display_on_homepage %}
-        <a id="{{ project.title | slugify }}" data-scroll data-scroll-call="animate-in+{{ project.title | slugify }}" class="work__projects__project project animate__fadeIn">
-          <div class="thumbnail">
-            <button class="btn btn__circle btn__light btn__scale btn__text-animate video_modal_open" data-source="{{ project.source }}" data-poster="{{ project.image }}">
-              <span class="animate__text" data-content="Play">
-                <span class="animate__text__hide">Play</span>
-              </span>
-            </button>
-            <img src="{{ project.image }}">
+    {% for selected_project in section.selected_work %}
+      {% assign found_project = site.projects | where:"title", selected_project %}
+      {% assign project = found_project[0] %}
+      <a id="{{ project.title | slugify }}" data-scroll data-scroll-call="animate-in+{{ project.title | slugify }}" class="work__projects__project project animate__fadeIn">
+        <div class="thumbnail">
+          <button class="btn btn__circle btn__light btn__scale btn__text-animate video_modal_open" data-source="{{ project.source }}" data-poster="{{ project.image }}">
+            <span class="animate__text" data-content="Play">
+              <span class="animate__text__hide">Play</span>
+            </span>
+          </button>
+          <img src="{{ project.image }}">
+        </div>
+        <div class="content">
+          <div class="information">
+            <p class="title" style="--transition-delay: 0.1s"><span>{{ project.title }}</span></p>
+            <p class="media" style="--transition-delay: 0.2s"><span>{{ project.media }}</span></p>
+            <p class="credit" style="--transition-delay: 0.3s"><span>{{ project.credit_title }}: {{ project.credit_name }}</span></p>
           </div>
-          <div class="content">
-            <div class="information">
-              <p class="title" style="--transition-delay: 0.1s"><span>{{ project.title }}</span></p>
-              <p class="media" style="--transition-delay: 0.2s"><span>{{ project.media }}</span></p>
-              <p class="credit" style="--transition-delay: 0.3s"><span>{{ project.credit_title }}: {{ project.credit_name }}</span></p>
-            </div>
-            <div class="preview">
-              <p class="number animate__text" data-content="0{{ forloop.index }}">
-                <span class="animate__text__hide">0{{ forloop.index }}</span>
-              </p>
-            </div>
+          <div class="preview">
+            <p class="number animate__text" data-content="0{{ forloop.index }}">
+              <span class="animate__text__hide">0{{ forloop.index }}</span>
+            </p>
           </div>
-        </a>
-      {% endif %}
+        </div>
+      </a>
     {% endfor %}
   </div>
   <script>
@@ -71,7 +70,7 @@
   </script>
   <div class="section__content offset__right">
     <div class="section__content__container">
-      <p class="description animate__fadeIn" id="{{ project.template }}-description" data-scroll data-scroll-call="animate-in+{{ project.template }}-description">{{ project.description }}</p>
+      <p class="description animate__fadeIn" id="{{ section.template }}-description" data-scroll data-scroll-call="animate-in+{{ section.template }}-description">{{ section.description }}</p>
     </div>
   </div>
 </div>

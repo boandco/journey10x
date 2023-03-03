@@ -1,6 +1,5 @@
 ---
   title: "State Farm - “Good Neighbor Month: Karl-Anthony Towns”"
-  display_on_homepage: true
   media: Social Media
   credit_title: Producer
   credit_name: Eric Alan Donaldson
